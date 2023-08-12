@@ -69,24 +69,13 @@ export default function Page() {
                     </div>
 
                     <div className="Content">
-                        <Title size="h4" text="디벨서비스"/>
+                        <Title size="h4" text="디벨서포트"/>
                         <div className="GroupCard">
-                            <Card icon={{icon: "Facebook"}} text="디벨코드로 문의 및 신고" subText={{position: "top", text: "디벨로이드 공식 디스코드"}} link={{link: "/", pointer: true}}/>
-                            <Card icon={{icon: "Facebook"}} text="카카오톡으로 문의 및 신고" link={{link: "/", pointer: true}}/>
-                            <Card icon={{icon: "Facebook"}} text="이메일로 불량 회원 신고" link={{link: "/", pointer: true}}/>
-                            <Card icon={{icon: "Facebook"}} text="이메일로 운영 건의" link={{link: "/", pointer: true}}/>
-                            <Card icon={{icon: "Facebook"}} text="이메일로 운영 문의" link={{link: "/", pointer: true}}/>
-                        </div>
-                    </div>
-
-                    <div className="Content">
-                        <Title size="h4" text="디벨로이드"/>
-                        <div className="GroupCard">
-                            <Card icon={{icon: "Facebook"}} text="커뮤니티" link={{link: "/", pointer: true}}/>
-                            <Card icon={{icon: "Facebook"}} text="공지사항" link={{link: "/", pointer: true}}/>
-                            <Card icon={{icon: "Facebook"}} text="브랜드 아이덴티티" link={{link: "/", pointer: true}}/>
-                            <Card icon={{icon: "Facebook"}} text="제휴 업무 소개서" link={{link: "/", pointer: true}}/>
-                            <Card icon={{icon: "Facebook"}} text="제휴 맺기" link={{link: "/", pointer: true}}/>
+                            <Card icon={{icon: "Facebook"}} text="디벨코드로 문의 및 신고" subText={{position: "top", text: "디벨로이드 공식 디스코드"}} link={{link: "https://discord.gg/YrHnmFphVY", pointer: true}}/>
+                            <Card icon={{icon: "Facebook"}} text="카카오톡으로 문의 및 신고" link={{link: "http://pf.kakao.com/_jNylj/chat", pointer: true}}/>
+                            <Card icon={{icon: "Facebook"}} text="이메일로 불량 회원 신고" link={{link: "https://goo.gl/forms/5kb71oAXFtlqM8Fj2", pointer: true}}/>
+                            <Card icon={{icon: "Facebook"}} text="이메일로 운영 건의" link={{link: "https://forms.gle/2WgX8qCCPLRmVM3R6", pointer: true}}/>
+                            <Card icon={{icon: "Facebook"}} text="이메일로 운영 문의" link={{link: "https://forms.gle/F7Q35szejXc6dcya8", pointer: true}}/>
                         </div>
                     </div>
                 </div>
