@@ -12,20 +12,18 @@ const Header = ({
     return (
         <>
             <header className={styles.Group}>
-                <Link href="/">
-                    <SVG Icon="Google" Size={16}/>
+                <Link href="/" className={styles.Icon}>
+                    <SVG Icon="Develoid" Size={22}/>
                 </Link>
                 <div className={styles.GroupLink}>
-                    <Link href="/" className={styles.Link}>COMMUNITY</Link>
-                    <Link href="/" className={styles.Link}>GUIDE</Link>
-                    <Link href="/" className={styles.Link}>EVENT</Link>
-                    <Link href="/" className={styles.Link}>SUPPORT</Link>
+                    <Link href="https://develoid.net" className={styles.Link}>COMMUNITY</Link>
+                    <Link href="https://develoid.github.io" className={styles.Link}>GUIDE</Link>
+                    <Link href="https://cafe.naver.com/develoid/menu/604" className={styles.Link}>EVENT</Link>
+                    <Link href="/support" className={styles.Link}>SUPPORT</Link>
                 </div>
-                <div className={styles.GroupIcon}>
-                    <div className={styles.Icon}>
-                        <SVG Icon="Apple" Size={16}/>
-                    </div>
-                </div>
+                <Link href="/all" className={styles.Icon}>
+                    <SVG Icon="Menu" Size={20}/>
+                </Link>
             </header>
             <div className={styles.Background}/>
         </>

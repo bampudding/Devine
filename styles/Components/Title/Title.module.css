@@ -3,12 +3,18 @@
     align-items: center;
     justify-content: space-between;
 }
+    .h1 {
+        padding-bottom: var(--padding-large);
+    }
     .h1 > .Title {
         font-size: var(--font-size-h1);
     }
     .h1 > .Side {
         font-size: var(--font-size-h5);
         font-weight: var(--font-weight-extrabold);
+    }
+    .h2 {
+        padding-bottom: var(--padding-large);
     }
     .h2 > .Title {
         font-size: var(--font-size-h2);
@@ -64,6 +70,7 @@
             background: var(--hover-default);
             color: var(--color-water-hover);
         }
+        
         .Group a:active, .Group button:active {
             background: var(--pressed-default);
             color: var(--color-water-pressed);

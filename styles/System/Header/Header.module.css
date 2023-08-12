@@ -13,10 +13,35 @@
     z-index: 1001;
 }
 
+    .GroupIcon {
+        display: flex;
+        gap: var(--gap-large);
+    }
+
+        .Icon {
+            border-radius: var(--radius-default);
+            margin: calc(-1 * var(--padding-nano));
+            padding: var(--padding-nano);
+        }
+
+            .Icon:hover {
+                background: var(--hover-default);
+            }
+
+            .Icon:active {
+                background: var(--pressed-default);
+            }
+
     .GroupLink {
         display: flex;
         gap: var(--gap-tera);
     }
+
+        @media (max-width: 767.98px) {
+            .GroupLink {
+                display: none;
+            }
+        }
 
         .Link {
             opacity: .7;
@@ -24,14 +49,18 @@
             font-weight: var(--font-weight-medium);
             color: unset;
             text-decoration: unset;
-            letter-spacing: .3rem;
+            letter-spacing: var(--padding-pico);
+            border-radius: var(--radius-default);
+            padding: var(--padding-really-small) var(--padding-pico) var(--padding-really-small) var(--padding-really-small);
         }
 
             .Link:hover {
+                background: var(--hover-default);
                 opacity: .8;
             }
 
             .Link:active {
+                background: var(--pressed-default);
                 opacity: 1;
             }
 

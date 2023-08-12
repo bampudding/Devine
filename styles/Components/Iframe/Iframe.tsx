@@ -8,7 +8,7 @@ const Iframe= ({
     link
 }: Props) => {
     return (
-        <iframe className={styles.Iframe} loading="lazy" src={link}/>
+        <iframe className={styles.Iframe} loading="lazy" tabIndex={-1} src={link}/>
     )
 }
 

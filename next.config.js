@@ -5,7 +5,7 @@ module.exports = nextConfig
 
 module.exports = {
     images: {
-        domains: ['go.develoid.net'],
+        domains: ['images.unsplash.com', 'go.develoid.net'],
         formats: ['image/avif', 'image/webp'],
     },
     reactStrictMode: true,

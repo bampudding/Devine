@@ -1,3 +1,4 @@
+import ThemeProviders from '@/modules/SystemFunction/Theme';
 import '@/styles/StyleSheet/ImportStyleSheet.css';
 import { Metadata } from "next";
 
@@ -28,7 +29,9 @@ export default function RootLayout({
 	return (
 		<html lang="ko" suppressHydrationWarning>
 			<body>
-				{children}
+				<ThemeProviders>
+					{children}
+				</ThemeProviders>
 			</body>
 		</html>
   	)

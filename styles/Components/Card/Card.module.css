@@ -20,9 +20,9 @@
         gap: var(--gap-default);
     }
 
-    .LeftContent_Small {
-        align-items: flex-start;
-    }
+        .Vertical .LeftContent {
+            gap: var(--gap-really-large);
+        }
 
         .Icon {
             background: var(--box-icon);
@@ -30,6 +30,10 @@
             border-radius: var(--radius-circle);
             padding: var(--padding-really-small);
         }
+
+            .Small .Icon, .Vertical .Icon {
+                padding: var(--padding-nano);
+            }
 
             .hidebox {
                 background: unset;
@@ -49,10 +53,18 @@
                 font-weight: var(--font-weight-medium);
             }
 
+                .Small .Text {
+                    font-size: var(--font-size-p) !important;
+                }
+
             .subText {
                 font-size: var(--font-size-p-small);
                 opacity: .6;
             }
+
+                .Small .subText {
+                    font-size: var(--font-size-p-really-small) !important;
+                }
 
     .Pointer {
         opacity: .2;

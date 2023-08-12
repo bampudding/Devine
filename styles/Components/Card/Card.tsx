@@ -28,12 +28,12 @@ const Card = ({
     type, size, icon, image, text, subText, link
 }: Props) => {
     return (
-        <Link href={link?.link || ""} className={`${styles.Group} ${type === "vertical" ? styles.Vertical : ""}`}>
+        <Link href={link?.link || ""} className={`${styles.Group} ${size === "small" ? styles.Small : ""} ${type === "vertical" ? styles.Vertical : ""}`}>
             
-            <div className={`${styles.LeftContent} ${size === "small" ? styles.LeftContent_Small : ""} ${type === "vertical" ? styles.Vertical : ""}`}>
+            <div className={`${styles.LeftContent} ${type === "vertical" ? styles.Vertical : ""}`}>
 
-                {icon && <div className={`${styles.Icon} ${icon.hidebox ? styles.hidebox : ""}`}><SVG Icon={icon.icon} Size={size === "small" ? 12 : 18}/></div>}
-                {image && <div className={`${styles.Image} ${image.hidebox ? styles.hidebox : ""}`}><SVG Icon={image.url} Size={size === "small" ? 12 : 18}/></div>}
+                {icon && <div className={`${styles.Icon} ${icon.hidebox ? styles.hidebox : ""}`}><SVG Icon={icon.icon} Size={size === "small" ? 12 : type === "vertical" ? 14 : 18}/></div>}
+                {image && <div className={`${styles.Image} ${image.hidebox ? styles.hidebox : ""}`}><SVG Icon={image.url} Size={size === "small" ? 12 : type === "vertical" ? 14 : 18}/></div>}
 
                 <div className={styles.GroupText}>
                     {subText?.position === "top" && <div className={styles.subText}>{subText.text}</div>}

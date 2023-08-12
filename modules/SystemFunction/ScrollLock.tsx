@@ -12,7 +12,7 @@ const useScrollLock = () => {
     };
 
     const openScroll = () => {
-        document.body.style.overflow = ''; // 'hidden' 스타일 제거
+        document.body.style.overflow = '';
         document.body.style.position = '';
         document.body.style.top = '';
         document.body.style.width = '';
@@ -27,7 +27,7 @@ const useScrollLock = () => {
         };
     }, []);
 
-    return { openScroll, lockScroll }; // openScroll 함수를 반환
+    return { openScroll, lockScroll };
 };
 
 export default useScrollLock;

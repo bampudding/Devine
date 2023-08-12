@@ -1,28 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./Develbest.module.css";
+import styles from "./Post.module.css";
 
 interface Props {
     text: string;
-    subText: string;
+    subText?: string;
     image: string;
     link: string;
 }
 
-const Develbest = ({
+const Post = ({
     text, subText, image, link
 }: Props) => {
     return (
         <div className="GroupCard">
             <Link href={link} className={styles.Group}>
+                <Image loading="eager" src={image} alt={text} fill/>
                 <div className={styles.Textarea}>
                     <div className={styles.Text}>{text}</div>
-                    <div className={styles.Subtext}>{subText}</div>
+                    {subText && <div className={styles.Subtext}>{subText}</div>}
                 </div>
-                <Image src={image} alt={text} fill sizes="auto"/>
             </Link>
         </div>
     )
 }
 
-export default Develbest
+export default Post

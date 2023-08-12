@@ -1,4 +1,5 @@
 .Group {
+    box-sizing: content-box;
     display: flex;
     flex-direction: column;
     text-decoration: unset;
@@ -13,19 +14,19 @@
         color: var(--body-default);
         position: relative;
         background: var(--nocolor-default);
-        padding: var(--padding-large);
+        padding: var(--padding-default);
         z-index: 1;
         border-radius: 0 0 var(--radius-small) var(--radius-small);
     }
 
         .Text {
-            font-size: var(--font-size-h6);
+            font-size: var(--font-size-interaction-default);
             font-weight: var(--font-weight-semibold);
         }
 
         .Subtext {
             opacity: .8;
-            font-size: var(--font-size-p);
+            font-size: var(--font-size-interaction-small);
         }
 
     .Group > img {

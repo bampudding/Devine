@@ -1,8 +1,18 @@
 .Iframe {
     border: var(--border-default-settings);
-    border-radius: var(--radius-default);
+    border-radius: var(--radius-small);
+    box-shadow: var(--shadow-small);
     flex: 1;
+    height: 100%;
 }
+
+    .Iframe:hover {
+        box-shadow: var(--shadow-default);
+    }
+
+    .Iframe:active {
+        box-shadow: var(--shadow-strong);
+    }
 
     @media (max-width: 767.98px) {
         .Iframe {

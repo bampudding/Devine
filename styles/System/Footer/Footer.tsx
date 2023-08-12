@@ -1,19 +1,14 @@
-import Link from "next/link"
+import SVG from "../SVG/SVG"
 import styles from "./Footer.module.css"
 
 const Footer = () => {
     return (
-        <footer className={styles.Footer}>
-            <div className={styles.TopContent}>
-                <div className={styles.Element}>
-                    <div>
-                        DEVELOID
-                    </div>
-                </div>
-                <div className={styles.Element}>
-                    <Link className={styles.Button} href="/policy/terms">이용 약관</Link>
-                    <Link className={styles.Button} href="/policy/privacy">개인정보처리방침</Link>
-                </div>
+        <footer className={styles.Group}>
+            <div className={styles.LeftContent}>
+                <SVG Icon="Develoid" Size={24}/>
+            </div>
+            <div className={styles.RightContent}>
+                <SVG Icon="Develoid" Size={24}/>
             </div>
         </footer>
     )
