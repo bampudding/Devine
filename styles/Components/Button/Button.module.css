@@ -1,0 +1,31 @@
+.Group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--nocolor-default);
+    border-radius: var(--radius-small);
+    border: var(--border-default-settings);
+    padding: var(--padding-default);
+    font-weight: var(--font-weight-medium);
+    color: unset;
+    text-decoration: unset;
+}
+
+    .Group:hover {
+        background: var(--hover-nocolor);
+    }
+
+    .Group:active {
+        background: var(--pressed-nocolor);
+    }
+
+    .Column {
+        flex-direction: column;
+        font-size: var(--font-size-interaction-small);
+        gap: var(--gap-default);
+    }
+
+    .Row {
+        gap: var(--gap-small);
+        font-size: var(--font-size-interaction-default);
+    }

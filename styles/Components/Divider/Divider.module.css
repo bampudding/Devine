@@ -1,0 +1,6 @@
+.Divider {
+    width: 100%;
+    height: auto;
+    border-bottom: var(--border-default-settings);
+    transition: var(--transition);
+}

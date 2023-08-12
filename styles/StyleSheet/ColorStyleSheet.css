@@ -1,0 +1,234 @@
+/* Color Settings */
+
+:root {
+    /* MDS Color */
+    --color-water-primary: hsl(209, 100%, 60%);
+    --color-water-secondary: hsl(209, 100%, 67%);
+    --color-water-hover: hsl(209, 87%, 56%);
+    --color-water-pressed: hsl(209, 73%, 53%);
+
+    --color-sand-primary: hsl(40, 100%, 64%);
+    --color-sand-secondary: hsl(40, 100%, 69%);
+    --color-sand-hover: hsl(40, 79%, 58%);
+    --color-sand-pressed: hsl(39, 69%, 55%);
+
+    --color-coral-primary: hsl(0, 100%, 64%);
+    --color-coral-secondary: hsl(0, 100%, 68%);
+    --color-coral-hover: hsl(0, 76%, 58%);
+    --color-coral-pressed: hsl(0, 66%, 54%);
+
+    /* System Default */
+    --background-default: rgb(246, 248, 250);
+    --background-code: rgb(224, 226, 230);
+    --background-blur: rgba(246, 248, 250, .8);
+    --reversed-blur: rgba(20, 20, 20, .3);
+    --nocolor-default: rgb(255, 255, 255);
+    --nocolor-blur: rgba(255, 255, 255, .6);
+    --transparent-default: rgba(0, 0, 0, 0);
+    --body-default: rgb(50, 50, 50);
+    --border-default: rgba(0, 0, 0, .08);
+    --border-default-settings: .1rem solid var(--border-default);
+    --border-reversed: rgba(60, 60, 60, 0.6);
+    --strong-default: rgb(238, 238, 238);
+
+    --hover-default: rgba(236, 239, 243);
+    --pressed-default: rgba(229, 232, 235);
+    --hover-nocolor: rgba(248, 248, 248);
+    --pressed-nocolor: rgba(242, 242, 242);
+    --hover-strong: rgb(225, 225, 225);
+    --pressed-strong: rgb(215, 215, 215);
+
+    /* White Blur */
+    --white-blur: rgba(220, 220, 220, .3);
+
+    /* Box Color */
+    --box-icon: rgba(255, 255, 255, .2);
+
+    /* Shadow Color */
+    --shadow-really-small: 0 2px 8px 2px rgba(0, 0, 0, .01);
+    --shadow-small: 0 2px 8px 2px rgba(0, 0, 0, .02);
+    --shadow-default: 0 2px 8px 2px rgba(0, 0, 0, .03);
+    --shadow-strong: 0 2px 8px 2px rgba(0, 0, 0, .06);
+}
+
+[data-theme="dark"] {
+    /* System Default */
+    --background-default: rgb(8, 8, 8);
+    --background-code: rgb(24, 24, 27);
+    --background-blur: rgba(8, 8, 8, .8);
+    --reversed-blur: rgba(220, 220, 220, .3);
+    --nocolor-default: rgb(14, 14, 14);
+    --nocolor-blur: rgba(14, 14, 14, .6);
+    --transparent-default: rgba(0, 0, 0, 0);
+    --body-default: rgb(255, 255, 255);
+    --border-default: rgba(50, 50, 50, .6);
+    --border-reversed: rgba(0, 0, 0, .1);
+    --strong-default: rgb(40, 40, 40);
+
+    --hover-default: rgba(16, 16, 16);
+    --pressed-default: rgba(24, 24, 24);
+    --hover-nocolor: rgb(24, 24, 24);
+    --pressed-nocolor: rgb(34, 34, 34);
+    --hover-strong: rgb(45, 45, 45);
+    --pressed-strong: rgb(55, 55, 55);
+
+    /* Box Color */
+    --box-icon: rgba(255, 255, 255, .1);
+
+    /* Shadow Color */
+    --shadow-really-small: 0 2px 8px 2px rgba(255, 255, 255, .005);
+    --shadow-small: 0 2px 8px 2px rgba(255, 255, 255, .015);
+    --shadow-default: 0 2px 8px 2px rgba(255, 255, 255, .02);
+    --shadow-strong: 0 2px 8px 2px rgba(255, 255, 255, .05);
+}
+
+.CardActivated {
+    background: var(--pressed-nocolor) !important;
+    box-shadow: var(--shadow-default) !important;
+}
+
+
+/* Coral */
+
+.Coral {
+    background: var(--color-coral-primary) !important;
+    border: 0 !important;
+    color: white !important;
+    fill: white !important;
+    
+}
+
+    .Coral * {
+        color: white !important;
+        fill: white !important;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .Coral:hover {
+            background: var(--color-coral-hover) !important;
+        }
+    }
+
+    .Coral:active {
+        background: var(--color-coral-pressed) !important;
+    }
+
+    .CoralSecondary {
+        background: var(--color-coral-secondary) !important;
+        border: 0 !important;
+        color: white !important;
+        fill: white !important;
+        
+    }
+    
+        .CoralSecondary * {
+            color: white !important;
+            fill: white !important;
+        }
+    
+        @media (hover: hover) and (pointer: fine) {
+            .CoralSecondary:hover {
+                background: var(--color-coral-primary) !important;
+            }
+        }
+    
+        .CoralSecondary:active {
+            background: var(--color-coral-hover) !important;
+        }
+        
+
+/* Sand */
+
+.Sand {
+    background: var(--color-sand-primary) !important;
+    border: 0 !important;
+    color: black !important;
+    fill: black !important;
+    
+}
+    .Sand * {
+        color: black !important;
+        fill: black !important;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .Sand:hover {
+            background: var(--color-sand-hover) !important;
+        }
+    }
+    
+    .Sand:active {
+        background: var(--color-sand-pressed) !important;
+    }
+
+    .SandSecondary {
+        background: var(--color-sand-secondary) !important;
+        border: 0 !important;
+        color: black !important;
+        fill: black !important;
+        
+    }
+
+        .SandSecondary * {
+            color: black !important;
+            fill: black !important;
+        }
+    
+        @media (hover: hover) and (pointer: fine) {
+            .SandSecondary:hover {
+                background: var(--color-sand-primary) !important;
+            }
+        }
+    
+        .SandSecondary:active {
+            background: var(--color-sand-hover) !important;
+        }
+    
+
+/* Water */
+
+.Water {
+    background: var(--color-water-primary) !important;
+    border: 0 !important;
+    color: white !important;
+    fill: white !important;
+    
+}
+
+    .Water * {
+        color: white !important;
+        fill: white !important;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .Water:hover {
+            background: var(--color-water-hover) !important;
+        }
+    }
+    
+    .Water:active {
+        background: var(--color-water-pressed) !important;
+    }
+
+    .WaterSecondary {
+        background: var(--color-water-secondary) !important;
+        border: 0 !important;
+        color: white !important;
+        fill: white !important;
+        
+    }
+
+        .WaterSecondary * {
+            color: white !important;
+            fill: white !important;
+        }
+    
+        @media (hover: hover) and (pointer: fine) {
+            .WaterSecondary:hover {
+                background: var(--color-water-primary) !important;
+            }
+        }
+    
+        .WaterSecondary:active {
+            background: var(--color-water-hover) !important;
+        }

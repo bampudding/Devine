@@ -1,0 +1,84 @@
+:root {
+    /* System Width Viewport */
+    --vp-width-pc: 1280px;
+    --vp-width-tablet: 768px;
+    --vp-width-mobile: 550px;
+    --vp-width-fold: 352px;
+
+    /* Padding */
+    --padding-huge: 4.8rem;
+    --padding-really-large: 3.6rem;
+    --padding-large: 2.4rem;
+    --padding-default: 1.6rem;
+    --padding-small: 1.2rem;
+    --padding-really-small: .8rem;
+    --padding-nano: .6rem;
+    --padding-pico: .4rem;
+
+    /* Gap */
+    --gap-tera: 3.6rem;
+    --gap-really-large: 2.4rem;
+    --gap-large: 1.6rem;
+    --gap-default: 1.2rem;
+    --gap-small: .8rem;
+    --gap-really-small: .6rem;
+    --gap-nano: .4rem;
+    --gap-pico: .2rem;
+
+    /* Blur */
+    --blur-strong: blur(1.6rem);
+    --blur-default: blur(.8rem);
+    --blur-weak: blur(.4rem);
+
+    /* Radius */
+    --radius-circle: 12.8rem;
+    --radius-really-large: 2.4rem;
+    --radius-large: 1.6rem;
+    --radius-default: .6rem;
+    --radius-small: .4rem;
+    --radius-really-small: .2rem;
+
+    /* Transition */
+    --transition: fill .2s ease-out, box-shadow .2s ease-out, color .2s ease-out, background .2s ease-out, border .2s ease-out, filter .2s ease-out, opacity .2s ease-out, width .2s ease-out, height .2s ease-out, visibility .2s ease-out, font-size .2s ease-out, font-weight .2s ease-out, letter-spacing .2s ease-out, line-height .2s ease-out, top .2s ease-out, transform .2s ease-out;
+    --transition-size: width 2.8s ease-out, height 2.8s ease-out;
+    --transition-nocolor: background .2s ease-out, border .2s ease-out, width .2s ease-out, height .2s ease-out, padding .2s ease-out, box-shadow .2s ease-out, transform .2s ease-out;
+    --transition-nocolor-noborder:background .2s ease-out, width .2s ease-out, height .2s ease-out, padding .2s ease-out, box-shadow .2s ease-out, transform .2s ease-out;
+    --transition-noborder:background .2s ease-out, color .2s ease-out, width .2s ease-out, height .2s ease-out, padding .2s ease-out, box-shadow .2s ease-out, transform .2s ease-out;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: var(--font-sans-serif) !important;
+    word-break: keep-all;
+    -webkit-tap-highlight-color : rgba(0, 0, 0, 0%) !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    background: var(--background-default);
+    color: var(--body-default);
+    font-size: var(--font-size);
+    letter-spacing: var(--letter-spacing-defualt);
+	font-variation-settings: 'rond' 3, 'edpt' 1;
+    vertical-align: top;
+    line-height: 1;
+    overflow-y: overlay;
+    transition: background .2s ease-out;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}

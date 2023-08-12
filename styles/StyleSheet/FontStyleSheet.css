@@ -1,0 +1,52 @@
+/* Font Settings */
+
+:root {
+    /* Font Size */
+    --font-size: 10px;
+    --font-size-h1: 5.6rem;
+    --font-size-h2: 4rem;
+    --font-size-h3: 3.5rem;
+    --font-size-h4: 2.3rem;
+    --font-size-h5: 1.9rem;
+    --font-size-h6: 1.6rem;
+    --font-size-p: 1.4rem;
+    --font-size-p-small: 1.3rem;
+    --font-size-p-really-small: 1.2rem;
+    --font-size-interaction-default: 1.4rem;
+    --font-size-interaction-small: 1.2rem;
+
+    /* Font Weight */
+    --font-weight-heavy: 900;
+    --font-weight-extrabold: 800;
+    --font-weight-bold: 700;
+    --font-weight-semibold: 600;
+    --font-weight-medium: 500;
+    --font-weight-regular: 400;
+    --font-weight-light: 300;
+    --font-weight-extralight: 200;
+    --font-weight-thin: 100;
+
+    /* Letter Spacing */
+    --letter-spacing-placeholder: -.04rem;
+    --letter-spacing-title: -.03rem;
+    --letter-spacing-default: -.02rem;
+
+    /* Line Height */
+    --line-height-docs: 1.5;
+
+    /* Font Family */
+    --font-monospace: "Fira Code VF", "Pretendard Variable", monospace;
+    --font-sans-serif: -apple-system, "Pretendard Variable", Pretendard, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+@media (max-width: 1079.98px) {
+    :root {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 349.98px) {
+    :root {
+        font-size: 7.5px;
+    }
+}

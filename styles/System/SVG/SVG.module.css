@@ -1,0 +1,10 @@
+.SVG {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.SVG * {
+    transition: var(--transition);
+}

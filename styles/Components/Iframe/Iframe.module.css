@@ -1,0 +1,12 @@
+.Iframe {
+    border: var(--border-default-settings);
+    border-radius: var(--radius-default);
+    flex: 1;
+}
+
+    @media (max-width: 767.98px) {
+        .Iframe {
+            flex: initial;
+            height: 62rem;
+        }
+    }

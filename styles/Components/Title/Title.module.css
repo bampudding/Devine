@@ -1,0 +1,70 @@
+.Group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    .h1 > .Title {
+        font-size: var(--font-size-h1);
+    }
+    .h1 > .Side {
+        font-size: var(--font-size-h5);
+        font-weight: var(--font-weight-extrabold);
+    }
+    .h2 > .Title {
+        font-size: var(--font-size-h2);
+        font-weight: var(--font-weight-extrabold);
+    }
+    .h2 > .Side {
+        font-size: var(--font-size-h6);
+    }
+    .h3 > .Title {
+        font-size: var(--font-size-h3);
+        font-weight: var(--font-weight-bold);
+    }
+    .h3 > .Side {
+        font-size: var(--font-size-p);
+    }
+    .h4 > .Title {
+        font-size: var(--font-size-h4);
+        font-weight: var(--font-weight-bold);
+    }
+    .h4 > .Side {
+        font-size: var(--font-size-p);
+    }
+    .h5 > .Title {
+        font-size: var(--font-size-h5);
+        font-weight: var(--font-weight-bold);
+    }
+    .h5 > .Side {
+        font-size: var(--font-size-p-small);
+    }
+    .h6 > .Title {
+        font-size: var(--font-size-h6);
+        font-weight: var(--font-weight-semibold);
+    }
+    .h6 > .Side {
+        font-size: var(--font-size-p-really-small);
+    }
+    .Group a, .Group button {
+        color: var(--color-water-primary);
+        border-radius: var(--radius-small);
+        margin: -.6rem;
+        padding: .6rem;
+    }
+
+        .Group a {
+            text-decoration: unset;
+        }
+        .Group button {
+            background: unset;
+            border: unset;
+        }
+
+        .Group a:hover, .Group button:hover {
+            background: var(--hover-default);
+            color: var(--color-water-hover);
+        }
+        .Group a:active, .Group button:active {
+            background: var(--pressed-default);
+            color: var(--color-water-pressed);
+        }

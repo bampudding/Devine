@@ -1,0 +1,60 @@
+.Footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--gap-really-large);
+    padding: var(--padding-huge);
+    background: var(--nocolor-default);
+    border-top: var(--border-default-settings);
+    transition: var(--transition);
+}
+
+    .Content {
+        display: flex;
+        width: 100%;
+        max-width: var(--vp-width-pc);
+    }
+
+        @media (max-width: 339.98px) {
+            .TopContent {
+                align-items: center;
+                flex-direction: column;
+                gap: var(--gap-large);
+            }
+        }
+
+        .TopContent {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+        }
+
+        .Element {
+            display: flex;
+            align-items: center;
+            gap: var(--gap-nano);
+            margin: -.8rem;
+        }
+
+            .Element > * {
+                font-size: 1.3rem;
+                padding: var(--padding-really-small);
+            }
+
+        .Button {
+            border-radius: var(--radius-small);
+            opacity: .6;
+            transition: var(--transition);
+        }
+
+            @media (hover: hover) and (pointer: fine) {
+                .Button:hover {
+                    opacity: .8;
+                    background: var(--hover-nocolor);
+                }
+            }
+            
+            .Button:active {
+                opacity: 1;
+                background: var(--pressed-nocolor);
+            }

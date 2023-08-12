@@ -1,0 +1,47 @@
+.GroupButton {
+    display: flex;
+    gap: var(--gap-large);
+}
+
+    .GroupButton > * {
+        width: 100%;
+    }
+
+
+
+.LayoutHome {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-large);
+}
+
+    @media (max-width: 767.98px) {
+        .LayoutHome {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .LayoutLeftHome {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-tera);
+    }
+
+
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-really-large);
+}
+
+
+.DVLBest {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-large);
+}
+
+    .DVLBest *:nth-child(1) {
+        grid-column: 1 / span 2;
+    }

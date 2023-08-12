@@ -1,0 +1,59 @@
+.Group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-default);
+    padding: var(--padding-default);
+    color: unset;
+    text-decoration: unset;
+}
+
+    .Vertical {
+        align-items: flex-start !important;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    .LeftContent {
+        display: flex;
+        align-items: center;
+        gap: var(--gap-default);
+    }
+
+    .LeftContent_Small {
+        align-items: flex-start;
+    }
+
+        .Icon {
+            background: var(--box-icon);
+            border: var(--border-default-settings);
+            border-radius: var(--radius-circle);
+            padding: var(--padding-really-small);
+        }
+
+            .hidebox {
+                background: unset;
+                border: 0;
+                padding: 0;
+                border-radius: 0;
+            }
+
+        .GroupText {
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap-really-small);
+        }
+
+            .Text {
+                font-size: var(--font-size-h6);
+                font-weight: var(--font-weight-medium);
+            }
+
+            .subText {
+                font-size: var(--font-size-p-small);
+                opacity: .6;
+            }
+
+    .Pointer {
+        opacity: .2;
+    }

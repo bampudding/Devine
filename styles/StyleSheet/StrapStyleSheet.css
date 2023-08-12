@@ -1,0 +1,325 @@
+/* Default Value */
+.width-100 {
+    width: 100%;
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.width-min-content {
+    width: min-content;
+}
+
+.height-min-content {
+    height: min-content;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-flex {
+    display: flex;
+}
+
+
+/* Flex */
+.flex-0-5 {
+    display: flex;
+    flex: .5;
+}
+
+    .flex-0-5 > * {
+        flex: .5;
+    }
+
+.flex-1 {
+    display: flex;
+    flex: 1;
+}
+
+    .flex-1 > * {
+        flex: 1;
+    }
+
+.flex-1-5 {
+    display: flex;
+    flex: 1.5;
+}
+
+.flex-2 {
+    display: flex;
+    flex: 2;
+}
+
+.flex-2-5 {
+    display: flex;
+    flex: 2.5;
+}
+
+
+/* Flex settings */
+
+.ai-center {
+    display: flex;
+    align-items: center;
+}
+
+.jc-start {
+    justify-content: flex-start;
+}
+
+.jc-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.jc-center {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Direction */
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Gap */
+.gap-4 {
+    display: flex;
+    gap: var(--gap-nano);
+}
+
+.gap-6 {
+    display: flex;
+    gap: var(--gap-really-small);
+}
+
+.gap-8 {
+    display: flex;
+    gap: var(--gap-small);
+}
+
+.gap-10 {
+    display: flex;
+    gap: var(--gap-default);
+}
+
+.gap-12 {
+    display: flex;
+    gap: var(--gap-default);
+}
+
+.gap-16 {
+    display: flex;
+    gap: var(--gap-large);
+}
+
+.gap-20 {
+    display: flex;
+    gap: var(--gap-large);
+}
+
+.gap-24 {
+    display: flex;
+    gap: var(--gap-really-large);
+}
+
+.gap-32 {
+    display: flex;
+    gap: 3.2rem;
+}
+
+.gap-36 {
+    display: flex;
+    gap: 3.6rem;
+}
+
+
+/* Grid */
+.grid {
+    display: grid;
+}
+
+.grid-col-2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .grid-col-2 > * {
+        flex: 33.3%;
+    }
+
+    @media (max-width: 319.98px) {
+        .grid-col-2 > * {
+            flex: 50%;
+        }
+    }
+
+.grid-col-2_def {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: dense;
+    align-content: flex-start;
+}
+
+.grid-col-3 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .grid-col-3 > * {
+        flex: 25%;
+    }
+
+    @media (max-width: 349.98px) {
+        .grid-col-3 > * {
+            flex: 33.3%;
+        }
+    }
+
+    @media (max-width: 319.98px) {
+        .grid-col-3 > * {
+            flex: 50%;
+        }
+    }
+
+.grid-col-4 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .grid-col-4 > * {
+        flex: 20%;
+    }
+
+    @media (max-width: 767.98px) {
+        .grid-col-4 > * {
+            flex: 42%;
+        }
+    }
+
+    @media (max-width: 319.98px) {
+        .grid-col-4 > * {
+            flex: 50%;
+        }
+    }
+
+/* Cursor */
+.cursor-default {
+    cursor: default;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+/* Position */
+.absolute {
+    position: absolute;
+}
+
+.sticky-general {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 9rem;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5vh;
+}
+
+
+/* Overflow */
+.overflow-auto {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+.overflow-visible {
+    overflow: visible;
+}
+
+
+/* Opacity */
+.opacity-90 {
+    opacity: .9;
+}
+
+.opacity-80 {
+    opacity: .8;
+}
+
+.opacity-70 {
+    opacity: .7;
+}
+
+.opacity-60 {
+    opacity: .6;
+}
+
+.opacity-50 {
+    opacity: .5;
+}
+
+.opacity-40 {
+    opacity: .4;
+}
+
+
+/* Display */
+.mobile-hide, .small-hide {
+    display: flex !important;
+}
+
+.mobile-show, .small-show {
+    display: none !important;
+}
+
+    @media (max-width: 767.98px) {
+        .mobile-show {
+            display: flex !important;
+        }
+
+        .mobile-hide {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 479.98px) {
+        .small-show {
+            display: flex !important;
+        }
+        
+        .small-hide {
+            display: none !important;
+        }
+    }
+
+
+/* Circle */
+.circle, .circle > * {
+    border-radius: var(--radius-circle) !important;
+}
+
+
+/* Border */
+.border {
+    border: var(--border-default-settings) !important;
+}
