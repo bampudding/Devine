@@ -1,0 +1,66 @@
+.Icon {
+    background: var(--nocolor-default);
+    line-height: 1;
+    height: min-content;
+    padding: 1rem;
+    border: var(--border-default-settings);
+    border-radius: var(--radius-circle);
+    cursor: pointer;
+    box-shadow: var(--shadow-really-small);
+    transition: var(--transition);
+}
+
+    @media (hover: hover) and (pointer: fine) {
+        .Icon:hover {
+            background: var(--hover-nocolor);
+            box-shadow: var(--shadow-small);
+        }
+    }
+
+    .Icon:active {
+        background: var(--pressed-nocolor);
+        box-shadow: var(--shadow-default);
+    }
+
+    .Theme {
+        border: 0 !important;
+    }
+
+        @media (hover: hover) and (pointer: fine) {
+            .Theme:hover {
+                border: var(--border-default-settings);
+            }
+        }
+        .Theme:active {
+            border: var(--border-default-settings);
+        }
+    
+    .System {
+        background: var(--background-default) !important;
+        padding: 0rem !important;
+        border-radius: var(--radius-default) !important;
+        border: 0 !important;
+        box-shadow: var(--shadow-really-small);
+    }
+
+        @media (hover: hover) and (pointer: fine) {
+            .System:hover {
+                background: var(--hover-default) !important;
+                box-shadow: var(--shadow-small);
+            }
+        }
+        
+        .System:active {
+            background: var(--pressed-default) !important;
+            box-shadow: var(--shadow-default);
+        }
+
+    .Checked {
+        background: var(--hover-default) !important;
+    }
+
+        @media (hover: hover) and (pointer: fine) {
+            .Checked:hover {
+                background: var(--pressed-default) !important;
+            }
+        }

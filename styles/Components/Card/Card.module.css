@@ -6,6 +6,7 @@
     padding: var(--padding-default);
     color: unset;
     text-decoration: unset;
+    transition: var(--transition);
 }
 
     .Vertical {
@@ -29,6 +30,7 @@
             border: var(--border-default-settings);
             border-radius: var(--radius-circle);
             padding: var(--padding-really-small);
+            transition: var(--transition);
         }
 
             .Small .Icon, .Vertical .Icon {

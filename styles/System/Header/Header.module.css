@@ -22,6 +22,7 @@
             border-radius: var(--radius-default);
             margin: calc(-1 * var(--padding-nano));
             padding: var(--padding-nano);
+            transition: var(--transition-nocolor);
         }
 
             .Icon:hover {
@@ -52,6 +53,7 @@
             letter-spacing: var(--padding-pico);
             border-radius: var(--radius-default);
             padding: var(--padding-really-small) var(--padding-pico) var(--padding-really-small) var(--padding-really-small);
+            transition: var(--transition);
         }
 
             .Link:hover {
@@ -73,4 +75,5 @@
     position: fixed;
     top: 0;
     z-index: 1000;
+    transition: var(--transition);
 }

@@ -28,11 +28,8 @@ const Radio = ({
 
     return (
         <label className={`${type === "Filter" ? styles.GroupFilter : type === "Settings" ? styles.GroupSettings : styles.Group} ${size === "Small" ? styles.Small : ""} ${color ? color : ""}`}>
-
             <input type="radio" id={value} name={name} value={value} className={styles.Input} checked={checked} disabled={disabled} readOnly={readOnly} onChange={onChange} {...(form && register && { ...register(toWhere)})}/>
-
             {type !== "Filter" && type !== "Settings" && <div className={styles.Checkbox} />}
-
             {type === "Filter" || type === "Settings" ? 
                 <div className={type === "Filter" ? styles.FilterText : styles.SettingsText}>
                     {icon &&
@@ -43,17 +40,9 @@ const Radio = ({
 
                     <div className={styles.Text}>{text}</div>
                 </div>
-                
                 :
-                
-                <div className={styles.Text}>
-                    {text}
-                </div>
+                <div className={styles.Text}>{text}</div>
             }
-
-
-
-            
         </label>
     );
     

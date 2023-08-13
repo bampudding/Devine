@@ -8,7 +8,7 @@ interface Props {
     text: string;
     subText?: string;
     image: string;
-    link: string;
+    link?: string;
 }
 
 const Bestphoto = ({
@@ -16,7 +16,7 @@ const Bestphoto = ({
 }: Props) => {
     return (
         <div className="GroupCard">
-            <Link href={link} className={styles.Group}>
+            <Link href={link || ""} className={styles.Group}>
                 <Suspense fallback={<Loading/>}>
                     <Image priority src={image} alt="베스트포토" fill sizes="auto"/>
                 </Suspense>

@@ -42,9 +42,9 @@
     /* Transition */
     --transition: fill .2s ease-out, box-shadow .2s ease-out, color .2s ease-out, background .2s ease-out, border .2s ease-out, filter .2s ease-out, opacity .2s ease-out, width .2s ease-out, height .2s ease-out, visibility .2s ease-out, font-size .2s ease-out, font-weight .2s ease-out, letter-spacing .2s ease-out, line-height .2s ease-out, top .2s ease-out, transform .2s ease-out;
     --transition-size: width 2.8s ease-out, height 2.8s ease-out;
-    --transition-nocolor: background .2s ease-out, border .2s ease-out, width .2s ease-out, height .2s ease-out, padding .2s ease-out, box-shadow .2s ease-out, transform .2s ease-out;
-    --transition-nocolor-noborder:background .2s ease-out, width .2s ease-out, height .2s ease-out, padding .2s ease-out, box-shadow .2s ease-out, transform .2s ease-out;
-    --transition-noborder:background .2s ease-out, color .2s ease-out, width .2s ease-out, height .2s ease-out, padding .2s ease-out, box-shadow .2s ease-out, transform .2s ease-out;
+    --transition-nocolor: background .2s ease-out, border .2s ease-out, width .2s ease-out, height .2s ease-out, padding .2s ease-out, box-shadow .2s ease-out, transform .2s ease-out, opacity .2s ease-out;
+    --transition-nocolor-noborder: background .2s ease-out, width .2s ease-out, height .2s ease-out, padding .2s ease-out, box-shadow .2s ease-out, transform .2s ease-out;
+    --transition-noborder: background .2s ease-out, color .2s ease-out, width .2s ease-out, height .2s ease-out, padding .2s ease-out, box-shadow .2s ease-out, transform .2s ease-out;
 }
 
 *,

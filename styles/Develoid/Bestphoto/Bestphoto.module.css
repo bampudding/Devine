@@ -5,6 +5,7 @@
     text-decoration: unset;
     max-width: 100vw;
     position: relative;
+    transition: var(--transition);
 }
 
     .Group:hover {
@@ -25,6 +26,7 @@
         padding: var(--padding-default);
         z-index: 1;
         border-radius: 0 0 var(--radius-small) var(--radius-small);
+        transition: var(--transition);
     }
 
         .Text {

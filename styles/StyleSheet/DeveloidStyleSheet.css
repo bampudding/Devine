@@ -140,3 +140,13 @@
             flex-direction: column;
         }
     }
+
+
+.GroupTheme {
+    display: flex;
+    gap: var(--gap-pico);
+    border: var(--border-default-settings);
+    border-radius: var(--radius-circle);
+    padding: var(--padding-pico);
+    transition: var(--transition);
+}

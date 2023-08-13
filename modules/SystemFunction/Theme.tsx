@@ -1,6 +1,6 @@
 'use client'
 
-import Radio from "@/styles/Components/Checkbox/Radio";
+import Icon from "@/styles/Components/Icon/Icon";
 import { ThemeProvider, useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import CheckDevice from "./CheckDevice";
@@ -63,11 +63,17 @@ export const ThemeButtons = ({
     const isMobile = CheckDevice()
     
     return (
-        <>
-            <Radio icon={{type: "Column", text: IconName("Sun")}} text="라이트 모드" checked={localStorage.theme === 'light'} onChange={() => ThemeChange("light")} color="Light"/>
-            <Radio icon={{type: "Column", text: isMobile ? IconName("Phone") : IconName("Screen")}} text="시스템 연동" checked={localStorage.theme === 'system' || !localStorage.theme} onChange={() => ThemeChange("system")} color="System"/>
-            <Radio icon={{type: "Column", text: IconName("Moon")}} text="다크 모드" checked={localStorage.theme === 'dark'} onChange={() => ThemeChange("dark")} color="Dark"/>
-        </>
+        <div className="GroupTheme">
+            {mounted &&
+                <Icon Type="Theme" Icon={IconName("Sun")} Size={16} Checked={localStorage.theme === 'light'} onClick={() => ThemeChange("light")} />
+            }
+            
+            <Icon Type="Theme" Icon={isMobile ? IconName("Phone") : IconName("Screen")} Size={16} Checked={localStorage.theme === 'system' || !localStorage.theme} onClick={() => ThemeChange("system")} />
+            
+            {mounted &&
+                <Icon Type="Theme" Icon={IconName("Moon")} Size={16} Checked={localStorage.theme === 'dark'} onClick={() => ThemeChange("dark")} />
+            }
+        </div>
     )
 }
 

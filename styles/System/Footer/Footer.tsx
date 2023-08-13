@@ -1,4 +1,4 @@
-import SVG from "../SVG/SVG"
+import { ThemeButtons } from "@/modules/SystemFunction/Theme"
 import styles from "./Footer.module.css"
 
 const Footer = () => {
@@ -6,10 +6,19 @@ const Footer = () => {
         <footer className={styles.Group}>
             <div className={styles.Container}>
                 <div className={styles.LeftContent}>
-                    DEVELOID
+                    <div className={styles.Promotion}>
+                        <p>Build</p>
+                        <h5>IT_Tech_Talks</h5>
+                        <h5>Community</h5>
+                        <h5>Content</h5>
+                    </div>
+                    <div className={styles.Promotion}>
+                        <p>Make</p>
+                        <h6>{`<DEVELOID/>`}</h6>
+                    </div>
                 </div>
                 <div className={styles.RightContent}>
-                    <SVG Icon="Develoid" Size={24}/>
+                    <ThemeButtons/>
                 </div>
             </div>
         </footer>
