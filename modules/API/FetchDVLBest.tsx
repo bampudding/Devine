@@ -1,5 +1,7 @@
 'use client'
 
+import useSWR from 'swr';
+
 interface Props {
     Title: string;
     Author: string;
@@ -7,24 +9,18 @@ interface Props {
     URL: string;
 }
 
-import { useEffect, useState } from "react";
+
+const fetcher = (url: string) => fetch(url).then((r) => r.json())
 
 export function FetchDVLBest(): Props[] | null {
-    const [data, setData] = useState(null);
 
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                const res = await fetch("https://opensheet.elk.sh/1I_j7-xXIt4uISHHe-JoF6CJLfsBUy8QJq5KFY2FgdqM/Current");
-                const responseData = await res.json();
-                setData(responseData);
-            } catch (error) {
-                console.error("Error fetching data:", error);
-            }
-        }
+    const { data, error } = useSWR(
+        "https://opensheet.elk.sh/1I_j7-xXIt4uISHHe-JoF6CJLfsBUy8QJq5KFY2FgdqM/Current",
+        fetcher
+      )
 
-        fetchData();
-    }, []);
-
-    return data;
+      if (error) console.log("에러가 발생했습니다.")
+      if (!data) console.log("데이터를 찾지 못했습니다..")
+     
+      return data
 }

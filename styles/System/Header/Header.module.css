@@ -13,6 +13,16 @@
     z-index: 1001;
 }
 
+    @media (max-width: 767.98px) {
+        .Group {
+            display: none;
+        }
+
+        .Background {
+            display: none;
+        }
+    }
+
     .GroupIcon {
         display: flex;
         gap: var(--gap-large);

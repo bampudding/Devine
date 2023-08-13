@@ -1,0 +1,55 @@
+.Group {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .Group {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background: var(--background-blur);
+        backdrop-filter: var(--blur-default);
+        border-top: var(--border-default-settings);
+        z-index: 500;
+        transition: var(--transition);
+    }
+}
+
+    .Container {
+        display: flex;
+        align-items: center;
+        width: calc(100% - 2 * var(--padding-large));
+        height: 9.2rem;
+        max-width: var(--vp-width-pc);
+    }
+
+    .Box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--gap-default);
+        color: unset;
+        text-decoration: none;
+        width: 100%;
+        padding: var(--padding-small) 0;
+        border-radius: var(--radius-default);
+        transition: var(--transition-nocolor);
+        cursor: pointer;
+    }
+
+        .Box:hover {
+            background: var(--hover-default);
+        }
+
+        .Box:active {
+            background: var(--pressed-default);
+        }
+
+        .Text {
+            font-size: var(--font-size-interaction-small);
+            font-weight: var(--font-weight-medium);
+        }

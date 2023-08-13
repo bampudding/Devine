@@ -8,7 +8,7 @@
 
 @media (max-width: calc(1279.98px + 4.8rem)) {
     .LiveActivity {
-        padding: 13.4rem 2.4rem;
+        padding: 13.4rem var(--padding-large);
     }
 }
 
@@ -23,6 +23,9 @@
     }
 
         @media (max-width: 767.98px) {
+            .LiveActivity {
+                padding: 9.2rem var(--padding-large);
+            }
             .Container {
                 gap: 4.2rem;
             }

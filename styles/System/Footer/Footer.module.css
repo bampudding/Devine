@@ -17,6 +17,12 @@
         width: 100%;
     }
 
+        @media (max-width: 767.98px) {
+            .Container {
+                padding-bottom: 9.2rem;
+            }
+        }
+
     .LeftContent {
         display: flex;
         flex-direction: column;
