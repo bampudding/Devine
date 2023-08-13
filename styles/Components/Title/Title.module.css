@@ -61,10 +61,12 @@
 
         .Group a {
             text-decoration: unset;
+            transition: var(--transition);
         }
         .Group button {
             background: unset;
             border: unset;
+            transition: var(--transition);
         }
 
         .Group a:hover, .Group button:hover {
