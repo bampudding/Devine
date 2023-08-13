@@ -133,3 +133,10 @@
     .DVLBest *:nth-child(1) {
         grid-column: 1 / span 2;
     }
+
+    @media (max-width: 349.98px) {
+        .DVLBest {
+            display: flex;
+            flex-direction: column;
+        }
+    }

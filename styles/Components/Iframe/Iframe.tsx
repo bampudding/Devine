@@ -1,3 +1,5 @@
+import Loading from "@/styles/System/Loading/Loading";
+import { Suspense } from "react";
 import styles from "./Iframe.module.css";
 
 interface Props {
@@ -8,7 +10,9 @@ const Iframe= ({
     link
 }: Props) => {
     return (
-        <iframe className={styles.Iframe} loading="lazy" tabIndex={-1} src={link}/>
+        <Suspense fallback={<Loading/>}>
+            <iframe className={styles.Iframe} tabIndex={-1} src={link}/>
+        </Suspense>
     )
 }
 

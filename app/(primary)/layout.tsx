@@ -1,6 +1,8 @@
 import LiveActivity from "@/styles/Activity/LiveActivity/LiveActivity";
 import Footer from "@/styles/System/Footer/Footer";
 import Header from "@/styles/System/Header/Header";
+import Loading from "@/styles/System/Loading/Loading";
+import { Suspense } from "react";
 
 export default function NestedLayout({
   	children,
@@ -12,7 +14,9 @@ export default function NestedLayout({
         <>
             <Header/>
             <LiveActivity>
-                {children}
+                <Suspense fallback={<Loading/>}>
+                    {children}
+                </Suspense>
             </LiveActivity>
             <Footer/>
         </>

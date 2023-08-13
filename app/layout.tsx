@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 		statusBarStyle: "default"
 	},
 	themeColor: [
-		{ media: '(prefers-color-scheme: light)', color: '#F2F2F7' },
+		{ media: '(prefers-color-scheme: light)', color: '#F6F8FA' },
 		{ media: '(prefers-color-scheme: dark)', color: '#000000' }
 	],
 }

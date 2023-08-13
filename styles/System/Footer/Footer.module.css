@@ -1,8 +1,16 @@
 .Group {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: var(--gap-really-large);
-    padding: var(--padding-huge);
+    padding: var(--padding-huge) var(--padding-large);
     background: var(--nocolor-default);
     border-top: var(--border-default-settings);
+    width: 100%;
 }
+
+    .Container {
+        display: flex;
+        justify-content: space-between;
+        max-width: var(--vp-width-pc);
+        width: 100%;
+    }

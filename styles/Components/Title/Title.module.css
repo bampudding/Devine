@@ -18,7 +18,7 @@
     }
     .h2 > .Title {
         font-size: var(--font-size-h2);
-        font-weight: var(--font-weight-extrabold);
+        font-weight: var(--font-weight-bold);
     }
     .h2 > .Side {
         font-size: var(--font-size-h6);
@@ -32,14 +32,14 @@
     }
     .h4 > .Title {
         font-size: var(--font-size-h4);
-        font-weight: var(--font-weight-bold);
+        font-weight: var(--font-weight-semibold);
     }
     .h4 > .Side {
         font-size: var(--font-size-p);
     }
     .h5 > .Title {
         font-size: var(--font-size-h5);
-        font-weight: var(--font-weight-bold);
+        font-weight: var(--font-weight-semibold);
     }
     .h5 > .Side {
         font-size: var(--font-size-p-small);

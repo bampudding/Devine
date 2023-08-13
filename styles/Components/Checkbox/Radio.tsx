@@ -41,9 +41,7 @@ const Radio = ({
                         </div>
                     }
 
-                    <div className={styles.Text}>
-                        {text}
-                    </div>
+                    <div className={styles.Text}>{text}</div>
                 </div>
                 
                 :

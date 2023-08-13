@@ -229,16 +229,10 @@
     position: absolute;
 }
 
-.sticky-general {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 9rem;
-}
-
 .sticky {
     position: -webkit-sticky;
     position: sticky;
-    top: 5vh;
+    top: 10rem;
 }
 
 

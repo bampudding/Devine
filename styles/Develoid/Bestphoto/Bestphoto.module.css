@@ -7,6 +7,14 @@
     position: relative;
 }
 
+    .Group:hover {
+        filter: brightness(95%);
+    }
+
+    .Group:active {
+        filter: brightness(90%);
+    }
+
     .Textarea {
         display: flex;
         justify-content: space-between;

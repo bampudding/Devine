@@ -60,10 +60,6 @@
     user-select: none;
 }
 
-*::-webkit-scrollbar {
-    display: none;
-}
-
 html {
     background: var(--background-default);
     color: var(--body-default);

@@ -10,10 +10,10 @@ export default function Page() {
             <Title size="h2" text="디벨로이드"/>
             <div className="GroupButton">
                 <div className="GroupCard">
-                    <Card size="small" icon={{icon: "Google"}} text="제휴 업무 소개서" link={{link: "", pointer: true}}/>
+                    <Card size="small" text="제휴 업무 소개서" link={{link: "http://naver.me/5IsbVWnO", pointer: true}}/>
                 </div>
                 <div className="GroupCard">
-                    <Card size="small" icon={{icon: "Google"}} text="제휴 맺기" link={{link: "", pointer: true}}/>
+                    <Card size="small" text="제휴 맺기" link={{link: "https://docs.google.com/forms/d/e/1FAIpQLSeB6dvSsHVPy69geM4y6rmTGzTqTaM3rmF6UCIocrnvQWLQMw/viewform", pointer: true}}/>
                 </div>
             </div>
 
@@ -28,10 +28,10 @@ export default function Page() {
                         <div className="column gap-16 height-100">
                             <Iframe link="https://m.cafe.naver.com/develoid"/>
                             <div className="grid-col-2 gap-12">
-                                <Button_Link matrix="column" icon="Moon" text="공지사항"/>
-                                <Button_Link matrix="column" icon="Moon" text="아이덴티티"/>
-                                <Button_Link matrix="column" icon="Moon" text="디벨코드"/>
-                                <Button_Link matrix="column" icon="Moon" text="디벨콘텐츠"/>
+                                <Button_Link matrix="column" icon="Notice" text="공지사항" link="https://cafe.naver.com/develoid/menu/1"/>
+                                <Button_Link matrix="column" icon="DeveloidFill" text="아이덴티티" link="/brand"/>
+                                <Button_Link matrix="column" icon="Discord" text="디벨코드" link="https://discord.gg/YrHnmFphVY"/>
+                                <Button_Link matrix="column" icon="DocumentData" text="디벨콘텐츠" link="https://cafe.naver.com/develoid/menu/1312"/>
                             </div>
                         </div>
             
