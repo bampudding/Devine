@@ -10,3 +10,7 @@ module.exports = {
     },
     reactStrictMode: true,
 }
+
+module.exports = {
+    output: 'standalone'
+}
