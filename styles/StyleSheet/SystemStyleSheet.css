@@ -68,7 +68,6 @@ html {
 	font-variation-settings: 'rond' 3, 'edpt' 1;
     vertical-align: top;
     line-height: 1;
-    overflow-y: overlay;
     transition: background .2s ease-out;
 }
 
@@ -78,4 +77,11 @@ body {
     justify-content: center;
     margin: 0;
     padding: 0;
+    overflow-y: scroll;
+}
+
+@media (max-width: 959.98px) {
+    .iframehide {
+        display: none;
+    }
 }

@@ -29,7 +29,7 @@
         background: var(--nocolor-default);
         padding: var(--padding-default);
         z-index: 1;
-        border-radius: 0 0 var(--radius-small) var(--radius-small);
+        border-radius: 0 0 var(--radius-default) var(--radius-default);
         transition: var(--transition);
     }
 
@@ -46,7 +46,7 @@
         }
 
     .Group > img {
-        border-radius: var(--radius-small);
+        border-radius: var(--radius-default) var(--radius-default) var(--radius-large) var(--radius-large);
         position: relative !important;
         object-fit: cover;
         object-position: center;

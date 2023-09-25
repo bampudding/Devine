@@ -1,47 +1,39 @@
-import Button_Link from "@/styles/Components/Button/Button_Link";
+import Button_Link from "@/styles/Components/Button/Button";
 import Card from "@/styles/Components/Card/Card";
 import Title from "@/styles/Components/Title/Title";
-import Bestphoto from "@/styles/Develoid/Bestphoto/Bestphoto";
 
 export default function Page() {
     return (
         <>
-            <Title size="h2" text="메뉴"/>
+            <Title size="h2" text={{pri: "메뉴"}}/>
 
             <div className="LayoutAll">
 
                 <div className="LayoutLeftAll">
 
-                    <div className="column gap-12">
-                        <Bestphoto image="/images/12th.png" text="디벨로이드 12주년을 축하해 주세요!" link="/"/>
-                    
-                        <div className="GroupButton mobile-show">
-                            <div className="GroupCard">
-                                <Button_Link matrix="column" icon="DeveloidFill" text="커뮤니티" link="https://develoid.net"/>
+                    <div className="Content">
+                        <Title size="h4" text={{pri: "디벨로이드"}}/>
+
+                        <div className="column gap-16">
+                            <div className="GroupButton">
+                                <div className="GroupCard">
+                                    <Button_Link matrix="column" icon="DeveloidFill" text="커뮤니티" link="https://develoid.net"/>
+                                </div>
+                                <div className="GroupCard">
+                                    <Button_Link matrix="column" icon="Notice" text="공지사항" link="https://cafe.naver.com/develoid/menu/1"/>
+                                </div>
                             </div>
+
                             <div className="GroupCard">
-                                <Button_Link matrix="column" icon="Notice" text="공지사항" link="https://cafe.naver.com/develoid/menu/1"/>
+                                <Card icon={{icon: "DeveloidFill"}} text="브랜드 아이덴티티" link={{link: "/brand", pointer: true}}/>
+                                <Card icon={{icon: "Document"}} text="제휴 업무 소개서" link={{link: "http://naver.me/5IsbVWnO", pointer: true}}/>
+                                <Card icon={{icon: "PersonAdd"}} text="제휴 맺기" link={{link: "https://forms.gle/31vn3DnVHsTjyc6Z7", pointer: true}}/>
                             </div>
                         </div>
                     </div>
 
                     <div className="Content">
-                        <Title size="h4" text="디벨로이드"/>
-                        <div className="GroupCard">
-                            <div className="mobile-hide flex-1">
-                                <Card icon={{icon: "DeveloidFill"}} text="커뮤니티" link={{link: "https://develoid.net", pointer: true}}/>
-                            </div>
-                            <div className="mobile-hide flex-1">
-                                <Card icon={{icon: "Notice"}} text="공지사항" link={{link: "https://cafe.naver.com/develoid/menu/1", pointer: true}}/>
-                            </div>
-                            <Card icon={{icon: "DeveloidFill"}} text="브랜드 아이덴티티" link={{link: "/brand", pointer: true}}/>
-                            <Card icon={{icon: "Document"}} text="제휴 업무 소개서" link={{link: "http://naver.me/5IsbVWnO", pointer: true}}/>
-                            <Card icon={{icon: "PersonAdd"}} text="제휴 맺기" link={{link: "https://forms.gle/31vn3DnVHsTjyc6Z7", pointer: true}}/>
-                        </div>
-                    </div>
-
-                    <div className="Content">
-                        <Title size="h4" text="디벨스퀘어"/>
+                        <Title size="h4" text={{pri: "디벨스퀘어"}}/>
                         <div className="GroupCard">
                             <Card icon={{icon: "Message"}} text="자유 게시판" link={{link: "https://cafe.naver.com/develoid/menu/5", pointer: true}}/>
                             <Card icon={{icon: "Document"}} text="뉴스 & 소식" link={{link: "https://cafe.naver.com/develoid/menu/102", pointer: true}}/>
@@ -57,15 +49,15 @@ export default function Page() {
 
                 <div className="LayoutRightAll sticky">
                     <div className="Content">
-                        <Title size="h4" text="디벨이벤트"/>
+                        <Title size="h4" text={{pri: "디벨이벤트"}}/>
                         <div className="GroupCard">
-                            <Card icon={{icon: "ShoppingBag"}} text="진행 중인 이벤트" link={{link: "https://cafe.naver.com/develoid/menu/604", pointer: true}}/>
-                            <Card icon={{icon: "ShoppingBag"}} text="종료된 이벤트" link={{link: "https://cafe.naver.com/ArticleList.nhn?search.clubid=23370764&search.menuid=604&search.boardtype=L&userDisplay=15&search.headid=2244", pointer: true}}/>
+                            <Card icon={{icon: "ShoppingBagFill"}} text="진행 중인 이벤트" link={{link: "https://cafe.naver.com/develoid/menu/604", pointer: true}}/>
+                            <Card icon={{icon: "ShoppingBagFill"}} text="종료된 이벤트" link={{link: "https://cafe.naver.com/ArticleList.nhn?search.clubid=23370764&search.menuid=604&search.boardtype=L&userDisplay=15&search.headid=2244", pointer: true}}/>
                         </div>
                     </div>
                     
                     <div className="Content">
-                        <Title size="h4" text="디벨베스트"/>
+                        <Title size="h4" text={{pri: "디벨베스트"}}/>
                         <div className="GroupCard">
                             <Card icon={{icon: "DocumentData"}} text="디벨베스트" link={{link: "https://cafe.naver.com/develoid/menu/1363", pointer: true}}/>
                             <Card icon={{icon: "DocumentData"}} text="디벨콘텐츠" link={{link: "https://cafe.naver.com/develoid/menu/1312", pointer: true}}/>
@@ -74,7 +66,7 @@ export default function Page() {
                     </div>
 
                     <div className="Content">
-                        <Title size="h4" text="디벨서포트"/>
+                        <Title size="h4" text={{pri: "디벨서포트"}}/>
                         <div className="GroupCard">
                             <Card icon={{icon: "Discord"}} text="디벨코드로 문의 및 신고" subText={{position: "top", text: "디벨로이드 공식 디스코드"}} link={{link: "https://discord.gg/YrHnmFphVY", pointer: true}}/>
                             <Card icon={{icon: "KakaoTalk"}} text="카카오톡으로 문의 및 신고" link={{link: "http://pf.kakao.com/_jNylj/chat", pointer: true}}/>

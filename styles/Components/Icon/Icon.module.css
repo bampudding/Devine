@@ -1,5 +1,5 @@
 .Icon {
-    background: var(--nocolor-default);
+    background: var(--background-default);
     line-height: 1;
     height: min-content;
     padding: 1rem;
@@ -12,13 +12,13 @@
 
     @media (hover: hover) and (pointer: fine) {
         .Icon:hover {
-            background: var(--hover-nocolor);
+            background: var(--hover-default);
             box-shadow: var(--shadow-small);
         }
     }
 
     .Icon:active {
-        background: var(--pressed-nocolor);
+        background: var(--pressed-default);
         box-shadow: var(--shadow-default);
     }
 
@@ -56,7 +56,7 @@
         }
 
     .Checked {
-        background: var(--hover-default) !important;
+        background: var(--pressed-default) !important;
     }
 
         @media (hover: hover) and (pointer: fine) {

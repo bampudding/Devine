@@ -47,7 +47,7 @@
         .GroupText {
             display: flex;
             flex-direction: column;
-            gap: var(--gap-really-small);
+            gap: var(--gap-small);
         }
 
             .Text {

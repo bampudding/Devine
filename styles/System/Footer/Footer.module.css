@@ -3,7 +3,6 @@
     justify-content: center;
     gap: var(--gap-really-large);
     padding: var(--padding-huge) var(--padding-large);
-    background: var(--nocolor-default);
     border-top: var(--border-default-settings);
     width: 100%;
     transition: var(--transition);

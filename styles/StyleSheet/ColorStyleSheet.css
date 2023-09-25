@@ -31,12 +31,17 @@
     --border-reversed: rgba(60, 60, 60, 0.6);
     --strong-default: rgb(238, 238, 238);
 
-    --hover-default: rgba(236, 239, 243);
-    --pressed-default: rgba(229, 232, 235);
-    --hover-nocolor: rgba(248, 248, 248);
-    --pressed-nocolor: rgba(242, 242, 242);
+    --hover-default: rgba(236, 239, 243, .8);
+    --pressed-default: rgba(229, 232, 235, .8);
+    --hover-default-nav: rgba(0, 0 ,0, .05);
+    --pressed-default-nav: rgba(0, 0 ,0, .1);
+    --hover-nocolor: rgba(248, 248, 248, .8);
+    --pressed-nocolor: rgba(242, 242, 242, .8);
     --hover-strong: rgb(225, 225, 225);
     --pressed-strong: rgb(215, 215, 215);
+
+    /* Black Blur */
+    --white-blur: rgba(0, 0, 0, 0.3);
 
     /* White Blur */
     --white-blur: rgba(220, 220, 220, .3);
@@ -65,10 +70,12 @@
     --border-reversed: rgba(0, 0, 0, .1);
     --strong-default: rgb(40, 40, 40);
 
-    --hover-default: rgba(16, 16, 16);
-    --pressed-default: rgba(24, 24, 24);
-    --hover-nocolor: rgb(24, 24, 24);
-    --pressed-nocolor: rgb(34, 34, 34);
+    --hover-default: rgba(255, 255, 255, .05);
+    --pressed-default: rgba(255, 255, 255, .1);
+    --hover-default-nav: rgba(255, 255, 255, .1);
+    --pressed-default-nav: rgba(255, 255, 255, .15);
+    --hover-nocolor: rgba(255, 255, 255, .08);
+    --pressed-nocolor: rgba(255, 255, 255, .11);
     --hover-strong: rgb(45, 45, 45);
     --pressed-strong: rgb(55, 55, 55);
 

@@ -1,0 +1,27 @@
+.LiveActivity {
+    display: flex;
+    justify-content: center;
+    padding: 14.4rem 0;
+    width: 100%;
+    transition: padding .2s ease-in-out;
+}
+
+@media (max-width: calc(1279.98px + 4.8rem)) {
+    .LiveActivity {
+        padding: 14.4rem var(--padding-large);
+    }
+}
+
+    .Container {
+        display: flex;
+        flex-direction: column;
+        gap: 3.6rem;
+        width: 100%;
+        max-width: var(--vp-width-pc);
+    }
+
+        @media (max-width: 767.98px) {
+            .Container {
+                gap: 4.2rem;
+            }
+        }

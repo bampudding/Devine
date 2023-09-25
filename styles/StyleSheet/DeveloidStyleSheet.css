@@ -41,6 +41,11 @@
         }
     }
 
+    @media (max-width: 959.98px) {
+        .iframemode {
+            display: flex;
+        }
+    }
 
 .LayoutSupport {
     display: grid;

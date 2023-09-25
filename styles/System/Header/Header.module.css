@@ -48,19 +48,14 @@
         gap: var(--gap-tera);
     }
 
-        @media (max-width: 767.98px) {
-            .GroupLink {
-                display: none;
-            }
-        }
-
         .Link {
             opacity: .7;
             font-size: var(--font-size-interaction-small);
             font-weight: var(--font-weight-medium);
             color: unset;
             text-decoration: unset;
-            letter-spacing: var(--padding-pico);
+            text-transform: uppercase;
+            letter-spacing: .2rem;
             border-radius: var(--radius-default);
             padding: var(--padding-really-small) var(--padding-pico) var(--padding-really-small) var(--padding-really-small);
             transition: var(--transition);
@@ -75,6 +70,11 @@
                 background: var(--pressed-default);
                 opacity: 1;
             }
+
+        .Activated {
+            font-weight: var(--font-weight-semibold);
+            opacity: 1 !important;
+        }
 
 .Background {
     background: var(--background-blur);

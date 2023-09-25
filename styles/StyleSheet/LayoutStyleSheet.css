@@ -6,7 +6,7 @@
     padding: var(--padding-large);
     background: var(--nocolor-default);
     border: var(--border-default-settings);
-    border-radius: var(--radius-small);
+    border-radius: var(--radius-default);
     box-shadow: var(--shadow-really-small);
     transition: var(--transition-nocolor);
 }
@@ -26,58 +26,63 @@
     gap: var(--gap-large);
     padding: var(--padding-default);
     background: var(--nocolor-default);
-    border-radius: var(--radius-small);
+    border-radius: var(--radius-default);
     border: var(--border-default-settings);
     box-shadow: var(--shadow-really-small);
     transition: var(--transition-nocolor);
 }
 
 /* Card */
-.GroupCard > * {
+.GroupCard {
     display: flex;
-    background: var(--nocolor-default);
-    border: var(--border-default-settings);
-    border-radius: var(--radius-small);
-    box-shadow: var(--shadow-small);
-    transition: var(--transition-nocolor);
+    flex-direction: column;
 }
 
-    @media (hover: hover) and (pointer: fine) {
-        .GroupCard > a:hover, button:hover {
-            background: var(--hover-nocolor);
+    .GroupCard > * {
+        display: flex;
+        background: var(--nocolor-default);
+        border: var(--border-default-settings);
+        border-radius: var(--radius-default);
+        box-shadow: var(--shadow-small);
+        transition: var(--transition-nocolor);
+    }
+
+        @media (hover: hover) and (pointer: fine) {
+            .GroupCard > a:hover, button:hover {
+                background: var(--hover-nocolor);
+            }
+
+            .GroupCard > *:hover {
+                box-shadow: var(--shadow-default);
+            }
         }
 
-        .GroupCard > *:hover {
-            box-shadow: var(--shadow-default);
+        .GroupCard > a:active, button:active {
+            background: var(--pressed-nocolor);
         }
-    }
 
-    .GroupCard > a:active, button:active {
-        background: var(--pressed-nocolor);
-    }
+        .GroupCard > *:active {
+            box-shadow: var(--shadow-strong);
+        }
 
-    .GroupCard > *:active {
-        box-shadow: var(--shadow-strong);
-    }
+        .GroupCard > *:first-child {
+            border-radius: var(--radius-default);
+        }
 
-    .GroupCard > *:first-child {
-        border-radius: var(--radius-small);
-    }
+        .GroupCard > *:first-child:not(:last-child) {
+            border-radius: var(--radius-default) var(--radius-default) 0 0;
+        }
 
-    .GroupCard > *:first-child:not(:last-child) {
-        border-radius: var(--radius-small) var(--radius-small) 0 0;
-    }
+        .GroupCard > *:not(:first-child):not(:last-child) {
+            border-radius: 0;
+            border-top: 0 solid var(--border-default);
+        }
 
-    .GroupCard > *:not(:first-child):not(:last-child) {
-        border-radius: 0;
-        border-top: 0 solid var(--border-default);
-    }
-
-    .GroupCard > *:not(:first-child):last-child {
-        border-radius: 0 0 var(--radius-small) var(--radius-small);
-        border-top: 0 solid var(--border-default);
-    }
-    
-    .GroupCard > *:last-child {
-        border-radius: var(--radius-small);
-    }
+        .GroupCard > *:not(:first-child):last-child {
+            border-radius: 0 0 var(--radius-default) var(--radius-default);
+            border-top: 0 solid var(--border-default);
+        }
+        
+        .GroupCard > *:last-child {
+            border-radius: var(--radius-default);
+        }

@@ -10,7 +10,7 @@
         min-width: 2.4rem;
         width: 50%;
         max-width: max-content;
-        border-radius: var(--radius-small);
+        border-radius: var(--radius-default);
         border: var(--border-default-settings);
         box-shadow: var(--shadow-really-small);
         transition: var(--transition);

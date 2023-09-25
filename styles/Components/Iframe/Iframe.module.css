@@ -1,6 +1,6 @@
 .Iframe {
     border: var(--border-default-settings);
-    border-radius: var(--radius-small);
+    border-radius: var(--radius-default);
     box-shadow: var(--shadow-small);
     flex: 1;
     width: 100%;

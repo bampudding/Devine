@@ -1,3 +1,42 @@
+.GroupHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 6.8rem;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 3200;
+}
+
+    @media (min-width: 768px) {
+        .GroupHeader {
+            display: none;
+        }
+    }
+
+    .text {
+        font-size: var(--font-size-h6);
+        font-weight: var(--font-weight-semibold);
+    }
+
+.Background {
+    background: var(--background-blur);
+    backdrop-filter: var(--blur-default);
+    border-bottom: var(--border-default-settings);
+    width: 100%;
+    height: 6.8rem;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+/*    */
+
 .Group {
     display: none;
 }
@@ -42,11 +81,11 @@
     }
 
         .Box:hover {
-            background: var(--hover-default);
+            background: var(--hover-default-nav);
         }
 
         .Box:active {
-            background: var(--pressed-default);
+            background: var(--pressed-default-nav);
         }
 
         .Text {

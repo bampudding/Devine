@@ -1,5 +1,5 @@
 import DVLBest from "@/modules/PageData/DVLBest";
-import Button_Link from "@/styles/Components/Button/Button_Link";
+import Button_Link from "@/styles/Components/Button/Button";
 import Card from "@/styles/Components/Card/Card";
 import Iframe from "@/styles/Components/Iframe/Iframe";
 import Title from "@/styles/Components/Title/Title";
@@ -7,7 +7,7 @@ import Title from "@/styles/Components/Title/Title";
 export default function Page() {
     return (
         <>
-            <Title size="h2" text="디벨로이드"/>
+            <Title size="h2" text={{pri: "디벨로이드"}}/>
             <div className="GroupButton">
                 <div className="GroupCard">
                     <Card size="small" text="제휴 업무 소개서" link={{link: "http://naver.me/5IsbVWnO", pointer: true}}/>
@@ -17,13 +17,13 @@ export default function Page() {
                 </div>
             </div>
 
-            <div className="LayoutHome">
+            <div className="LayoutHome iframemode">
                 <div className="LayoutLeftHome">
                     <DVLBest/>
                 </div>
-                <div className="LayoutRightHome">
+                <div className="LayoutRightHome iframehide">
                     <div className="Content height-100">
-                        <Title size="h4" text="커뮤니티"/>
+                        <Title size="h4" text={{pri: "커뮤니티"}}/>
                         
                         <div className="column gap-16 height-100">
                             <Iframe link="https://m.cafe.naver.com/develoid"/>
