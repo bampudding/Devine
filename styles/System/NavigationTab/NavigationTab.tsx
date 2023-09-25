@@ -1,7 +1,7 @@
 'use client'
 
 import CheckInvisible from '@/modules/SystemFunction/CheckInvisible';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import SVG from '../SVG/SVG';
@@ -30,20 +30,18 @@ const NavigationTab = ({
     return (
         <>
             {isClassInvisible &&
-                <AnimatePresence>
-                    <motion.header
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: .1 }}
-                        className={styles.GroupHeader}
-                    >
-                        <header className={`${styles.GroupHeader}`}>
-                            <div className={styles.text}>{headerText}</div>
-                        </header>
-                        <div className={styles.Background}/>
-                    </motion.header>
-                </AnimatePresence>
+                <motion.header
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: .1 }}
+                    className={styles.GroupHeader}
+                >
+                    <header className={`${styles.GroupHeader}`}>
+                        <div className={styles.text}>{headerText}</div>
+                    </header>
+                    <div className={styles.Background}/>
+                </motion.header>
             }
             <nav className={styles.Group}>
                 <div className={styles.Container}>

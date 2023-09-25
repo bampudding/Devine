@@ -2,7 +2,7 @@
 
 import Button from "@/styles/Components/Button/Button";
 import SvgIcon from "@/styles/System/SVG/SVG";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -51,71 +51,69 @@ const ErrorData = ({
     }
 
     return (
-        <AnimatePresence>
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: .2 }}
-                className={styles.Group}>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: .2 }}
+            className={styles.Group}>
 
-                <div className={styles.LeftContent}>
-                    <Image priority src={TextMapping[Type].Image} alt={TextMapping[Type].Title} sizes="auto" width={1} height={1} style={{width: "100%", height: "100%"}}/>
-                </div>
+            <div className={styles.LeftContent}>
+                <Image priority src={TextMapping[Type].Image} alt={TextMapping[Type].Title} sizes="auto" width={1} height={1} style={{width: "100%", height: "100%"}}/>
+            </div>
 
-                <div className={styles.RightContent}>
-                    <div className={styles.GroupError}>
-                        <div className={styles.Develoid}>
-                            <SvgIcon Icon="Develoid" Size={28} Color='var(--background-default)'/>
-                        </div>
-                        <div className={styles.GroupText}>
-                            <div className={styles.Title}>
-                                {TextMapping[Type].Title}
-                            </div>
-                            <div className={styles.SubTitle} dangerouslySetInnerHTML={{ __html: TextMapping[Type].SubTitle }}/>
-                        </div>
+            <div className={styles.RightContent}>
+                <div className={styles.GroupError}>
+                    <div className={styles.Develoid}>
+                        <SvgIcon Icon="Develoid" Size={28} Color='var(--background-default)'/>
                     </div>
-                    
-                    
-                    <div className={`${styles.GroupInteractionButton}`}>
-                        {
-                            Type === "NotFound" ?
-                                <div className="grid-col-2 gap-12">
-                                    <Button matrix="row" icon="ArrowLeft" text="뒤로가기" onClick={() => window.history.back()}/>
+                    <div className={styles.GroupText}>
+                        <div className={styles.Title}>
+                            {TextMapping[Type].Title}
+                        </div>
+                        <div className={styles.SubTitle} dangerouslySetInnerHTML={{ __html: TextMapping[Type].SubTitle }}/>
+                    </div>
+                </div>
+                
+                
+                <div className={`${styles.GroupInteractionButton}`}>
+                    {
+                        Type === "NotFound" ?
+                            <div className="grid-col-2 gap-12">
+                                <Button matrix="row" icon="ArrowLeft" text="뒤로가기" onClick={() => window.history.back()}/>
+                                <Button matrix="row" icon="HomeFill" text="홈으로 가기" link="/"/>
+                            </div>
+                        : Type === "SystemError" ?
+                            <>
+                                <div className="grid-col-3 gap-12">
+                                    <Button matrix="row" icon="ArrowLeft" text="뒤로가기" onClick={() => router.back()}/>
+                                    <Button matrix="row" icon="Refresh" text="새로고침" onClick={() => window.location.reload()}/>
                                     <Button matrix="row" icon="HomeFill" text="홈으로 가기" link="/"/>
                                 </div>
-                            : Type === "SystemError" ?
-                                <>
-                                    <div className="grid-col-3 gap-12">
-                                        <Button matrix="row" icon="ArrowLeft" text="뒤로가기" onClick={() => router.back()}/>
-                                        <Button matrix="row" icon="Refresh" text="새로고침" onClick={() => window.location.reload()}/>
-                                        <Button matrix="row" icon="HomeFill" text="홈으로 가기" link="/"/>
-                                    </div>
-                                </>
-                            : null
-                        }
-                    </div>
+                            </>
+                        : null
+                    }
+                </div>
+                
+            </div>
+
+            {Type === "SystemError" &&
+                <div className={styles.GroupErrorLog}>
+
+                    <button type="button" className={styles.Button} onClick={Click} style={{opacity: Show ? 1 : .6}}>
+                        <SvgIcon Icon="Warning" Size={12}/>
+                    </button>
+                        
+                    {Show && text &&
+                        <div className={`${styles.ErrorLog} GroupBox_Maintained`}>
+                            <div className={styles.ErrorTextTitle}>오류 로그</div>
+                            <div className={styles.ErrorText}>{text}</div>
+                        </div>
+                    }
                     
                 </div>
-
-                {Type === "SystemError" &&
-                    <div className={styles.GroupErrorLog}>
-
-                        <button type="button" className={styles.Button} onClick={Click} style={{opacity: Show ? 1 : .6}}>
-                            <SvgIcon Icon="Warning" Size={12}/>
-                        </button>
-                            
-                        {Show && text &&
-                            <div className={`${styles.ErrorLog} GroupBox_Maintained`}>
-                                <div className={styles.ErrorTextTitle}>오류 로그</div>
-                                <div className={styles.ErrorText}>{text}</div>
-                            </div>
-                        }
-                        
-                    </div>
-                }
-            </motion.div>
-        </AnimatePresence>
+            }
+        </motion.div>
     )
 }
 

@@ -1,0 +1,7 @@
+# Block frontdesign
+User-agent: *
+Disallow: /frontdesign
+
+# Allow all
+User-agent: *
+Allow: /

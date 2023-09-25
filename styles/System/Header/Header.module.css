@@ -13,6 +13,14 @@
     z-index: 1001;
 }
 
+    .HeaderScrolled {
+        height: 7.6rem !important;
+    }
+
+    .HeaderScrolled {
+        border-bottom: var(--border-default-settings) !important;
+    }
+
     @media (max-width: 767.98px) {
         .Group {
             display: none;
@@ -50,12 +58,12 @@
 
         .Link {
             opacity: .7;
-            font-size: var(--font-size-interaction-small);
+            font-size: 1.1rem;
             font-weight: var(--font-weight-medium);
             color: unset;
             text-decoration: unset;
             text-transform: uppercase;
-            letter-spacing: .2rem;
+            letter-spacing: .3rem;
             border-radius: var(--radius-default);
             padding: var(--padding-really-small) var(--padding-pico) var(--padding-really-small) var(--padding-really-small);
             transition: var(--transition);
@@ -79,9 +87,9 @@
 .Background {
     background: var(--background-blur);
     backdrop-filter: var(--blur-default);
-    border-bottom: var(--border-default-settings);
+    border-bottom: .1rem solid transparent;
     width: 100%;
-    height: 7.6rem;
+    height: 8.4rem;
     position: fixed;
     top: 0;
     z-index: 1000;

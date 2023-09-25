@@ -10,7 +10,7 @@ export default async function DVLBest() {
     return (
         <>
             <div className="Content">
-                <Title size="h4" text={{pri: "베스트포토"}} side={{text: "참여하기", link: "https://cafe.naver.com/ArticleList.nhn?search.clubid=23370764&search.menuid=7&search.boardtype=L&userDisplay=15&search.headid=2391"}}/>
+                <Title size="h4" text={{pri: data[0]["Additional Title"]}} side={{text: "참여하기", link: "https://cafe.naver.com/ArticleList.nhn?search.clubid=23370764&search.menuid=7&search.boardtype=L&userDisplay=15&search.headid=2391"}}/>
                 <Bestphoto text={data[0].Title} subText={data[0].Author} image={data[0].Image} link={data[0].URL}/>
             </div>
                 

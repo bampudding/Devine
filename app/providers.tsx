@@ -1,5 +1,6 @@
 'use client'
 
+import { AnimatePresence } from 'framer-motion'
 import { ThemeProvider } from 'next-themes'
 
 export function Providers({
@@ -8,8 +9,10 @@ export function Providers({
     children: React.ReactNode
 }) {
     return (
-        <ThemeProvider>
-            {children}
-        </ThemeProvider>
+        <AnimatePresence>
+            <ThemeProvider>
+                {children}
+            </ThemeProvider>
+        </AnimatePresence>
     )
 }

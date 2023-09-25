@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import SVG from "../SVG/SVG";
+import { HBackground } from "./HBackground/HBackground";
 import styles from "./Header.module.css";
 
 interface Props {
@@ -35,7 +36,7 @@ const Header = ({
                     <SVG Icon="Menu" Size={20}/>
                 </Link>
             </header>
-            <div className={styles.Background}/>
+            <HBackground/>
         </>
     )
 }
