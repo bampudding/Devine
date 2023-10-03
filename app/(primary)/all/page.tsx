@@ -28,26 +28,41 @@ export default function Page() {
                                 <Card icon={{icon: "DeveloidFill"}} text="브랜드 아이덴티티" link={{link: "/brand", pointer: true}}/>
                                 <Card icon={{icon: "Document"}} text="제휴 업무 소개서" link={{link: "http://naver.me/5IsbVWnO", pointer: true}}/>
                                 <Card icon={{icon: "PersonAdd"}} text="제휴 맺기" link={{link: "https://forms.gle/31vn3DnVHsTjyc6Z7", pointer: true}}/>
+                                <Card icon={{icon: "Message"}} text="자유 게시판" link={{link: "https://cafe.naver.com/develoid/menu/5", pointer: true}}/>
+                                <Card icon={{icon: "Document"}} text="뉴스 & 소식" link={{link: "https://cafe.naver.com/develoid/menu/102", pointer: true}}/>
+                                <Card icon={{icon: "Support"}} text="질문 게시판" link={{link: "https://cafe.naver.com/develoid/menu/1314", pointer: true}}/>
+                                <Card icon={{icon: "DocumentData"}} text="팁 게시판" link={{link: "https://cafe.naver.com/develoid/menu/577", pointer: true}}/>
+                                <Card icon={{icon: "Photo"}} text="포토 게시판" link={{link: "https://cafe.naver.com/develoid/menu/7", pointer: true}}/>
+                                <Card icon={{icon: "Store"}} text="중고장터" link={{link: "https://cafe.naver.com/develoid/menu/1200", pointer: true}}/>
+                                <Card icon={{icon: "Vehicle"}} text="공동구매" link={{link: "https://cafe.naver.com/develoid/menu/1292", pointer: true}}/>
+                                <Card icon={{icon: "ShoppingCart"}} text="특가 핫딜" link={{link: "https://cafe.naver.com/develoid/menu/1154", pointer: true}}/>
                             </div>
                         </div>
                     </div>
 
-                    <div className="Content">
-                        <Title size="h4" text={{pri: "디벨스퀘어"}}/>
-                        <div className="GroupCard">
-                            <Card icon={{icon: "Message"}} text="자유 게시판" link={{link: "https://cafe.naver.com/develoid/menu/5", pointer: true}}/>
-                            <Card icon={{icon: "Document"}} text="뉴스 & 소식" link={{link: "https://cafe.naver.com/develoid/menu/102", pointer: true}}/>
-                            <Card icon={{icon: "Support"}} text="질문 게시판" link={{link: "https://cafe.naver.com/develoid/menu/1314", pointer: true}}/>
-                            <Card icon={{icon: "DocumentData"}} text="팁 게시판" link={{link: "https://cafe.naver.com/develoid/menu/577", pointer: true}}/>
-                            <Card icon={{icon: "Photo"}} text="포토 게시판" link={{link: "https://cafe.naver.com/develoid/menu/7", pointer: true}}/>
-                            <Card icon={{icon: "Store"}} text="중고장터" link={{link: "https://cafe.naver.com/develoid/menu/1200", pointer: true}}/>
-                            <Card icon={{icon: "Vehicle"}} text="공동구매" link={{link: "https://cafe.naver.com/develoid/menu/1292", pointer: true}}/>
-                            <Card icon={{icon: "ShoppingCart"}} text="특가 핫딜" link={{link: "https://cafe.naver.com/develoid/menu/1154", pointer: true}}/>
-                        </div>
-                    </div>
                 </div>
 
                 <div className="LayoutRightAll sticky">
+                    <div className="Content">
+                        <Title size="h4" text={{pri: "디벨플레이"}}/>
+                        <div className="column gap-16">
+                            <div className="GroupButton">
+                                <div className="GroupCard">
+                                    <Button_Link matrix="column" icon="DeveloidFill" text="커뮤니티" link="https://develoid.net"/>
+                                </div>
+                                <div className="GroupCard">
+                                    <Button_Link matrix="column" icon="Notice" text="공지사항" link="https://cafe.naver.com/develoid/menu/1"/>
+                                </div>
+                            </div>
+
+                            <div className="GroupCard">
+                                <Card icon={{icon: "DeveloidFill"}} text="자유 게시판" link={{link: "/brand", pointer: true}}/>
+                                <Card icon={{icon: "Document"}} text="제휴 업무 소개서" link={{link: "http://naver.me/5IsbVWnO", pointer: true}}/>
+                                <Card icon={{icon: "PersonAdd"}} text="제휴 맺기" link={{link: "https://forms.gle/31vn3DnVHsTjyc6Z7", pointer: true}}/>
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="Content">
                         <Title size="h4" text={{pri: "디벨이벤트"}}/>
                         <div className="GroupCard">

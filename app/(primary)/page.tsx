@@ -7,7 +7,7 @@ import Title from "@/styles/Components/Title/Title";
 export default function Page() {
     return (
         <>
-            <Title size="h2" text={{pri: "디벨로이드"}}/>
+            <Title size="h2" text={{pri: "디벨서비스"}}/>
             <div className="GroupButton">
                 <div className="GroupCard">
                     <Card size="small" text="제휴 업무 소개서" link={{link: "http://naver.me/5IsbVWnO", pointer: true}}/>
@@ -23,7 +23,7 @@ export default function Page() {
                 </div>
                 <div className="LayoutRightHome iframehide">
                     <div className="Content height-100">
-                        <Title size="h4" text={{pri: "커뮤니티"}}/>
+                        <Title size="h4" text={{pri: "디벨로이드 커뮤니티"}}/>
                         
                         <div className="column gap-16 height-100">
                             <Iframe link="https://m.cafe.naver.com/develoid"/>
@@ -34,9 +34,7 @@ export default function Page() {
                                 <Button_Link matrix="column" icon="DocumentData" text="디벨콘텐츠" link="https://cafe.naver.com/develoid/menu/1312"/>
                             </div>
                         </div>
-            
                     </div>
-                    
                 </div>
             </div>
         </>
