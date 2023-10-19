@@ -18,15 +18,15 @@
     --color-coral-pressed: hsl(0, 66%, 54%);
 
     /* System Default */
-    --background-default: rgb(246, 248, 250);
+    --background-default: rgb(246, 246, 246);
     --background-code: rgb(224, 226, 230);
-    --background-blur: rgba(246, 248, 250, .8);
+    --background-blur: rgba(246, 246, 246, .8);
     --reversed-blur: rgba(20, 20, 20, .3);
     --nocolor-default: rgb(255, 255, 255);
     --nocolor-blur: rgba(255, 255, 255, .6);
     --transparent-default: rgba(0, 0, 0, 0);
     --body-default: rgb(50, 50, 50);
-    --border-default: rgba(0, 0, 0, .08);
+    --border-default: rgba(0, 0, 0, .04);
     --border-default-settings: .1rem solid var(--border-default);
     --border-reversed: rgba(60, 60, 60, 0.6);
     --strong-default: rgb(238, 238, 238);
@@ -50,10 +50,10 @@
     --box-icon: rgba(255, 255, 255, .2);
 
     /* Shadow Color */
-    --shadow-really-small: 0 2px 8px 2px rgba(0, 0, 0, .01);
-    --shadow-small: 0 2px 8px 2px rgba(0, 0, 0, .02);
-    --shadow-default: 0 2px 8px 2px rgba(0, 0, 0, .03);
-    --shadow-strong: 0 2px 8px 2px rgba(0, 0, 0, .06);
+    --shadow-really-small: 0 2px 8px 2px rgba(0, 0, 0, .001);
+    --shadow-small: 0 2px 8px 2px rgba(0, 0, 0, .005);
+    --shadow-default: 0 2px 8px 2px rgba(0, 0, 0, .01);
+    --shadow-strong: 0 2px 8px 2px rgba(0, 0, 0, .02);
 }
 
 [data-theme="dark"] {

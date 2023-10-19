@@ -19,7 +19,7 @@ export default function Page() {
 
             <div className="LayoutHome iframemode">
                 <div className="LayoutLeftHome">
-                    <DVLBest/>
+                    <DVLBest Type="Default"/>
                 </div>
                 <div className="LayoutRightHome iframehide">
                     <div className="Content height-100">
@@ -37,6 +37,10 @@ export default function Page() {
                     </div>
                 </div>
             </div>
+
+            <div className="grid-col-4 gap-16">
+                <DVLBest Type="Others"/>
+            </div> 
         </>
     )
 }

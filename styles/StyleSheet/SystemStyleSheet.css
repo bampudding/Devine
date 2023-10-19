@@ -35,8 +35,8 @@
     --radius-circle: 12.8rem;
     --radius-really-large: 2.4rem;
     --radius-large: 1.6rem;
-    --radius-default: .6rem;
-    --radius-small: .4rem;
+    --radius-default: 1.2rem;
+    --radius-small: 1.2rem;
     --radius-really-small: .2rem;
 
     /* Transition */
