@@ -53,6 +53,7 @@
             .Text {
                 font-size: var(--font-size-h6);
                 font-weight: var(--font-weight-medium);
+                line-height: 1.4;
             }
 
                 .Small .Text {

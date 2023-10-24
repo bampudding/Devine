@@ -1,7 +1,7 @@
 'use client'
 
 import CheckInvisible from '@/modules/SystemFunction/CheckInvisible';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import SVG from '../SVG/SVG';
@@ -22,27 +22,25 @@ const NavigationTab = ({
     const { isClassInvisible } = CheckInvisible({Class: "SubHeaderZone"});
     const pathname = usePathname();
     const headerText = (
-        pathname === '/' ? '디벨로이드' :
+        pathname === '/' ? '디벨서비스' :
         pathname === '/support' ? '디벨서포트' :
         array.find(item => pathname === item.link)?.text
     );
     
     return (
         <>
-            {isClassInvisible &&
-                <motion.header
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: .1 }}
-                    className={styles.GroupHeader}
-                >
-                    <header className={`${styles.GroupHeader}`}>
+            <AnimatePresence>
+                {isClassInvisible &&
+                    <motion.header
+                        initial={{ top: -100 }}
+                        animate={{ top: 0 }}
+                        exit={{ top: -100 }}
+                        className={styles.GroupHeader}
+                    >
                         <div className={styles.text}>{headerText}</div>
-                    </header>
-                    <div className={styles.Background}/>
-                </motion.header>
-            }
+                    </motion.header>
+                }
+            </AnimatePresence>
             <nav className={styles.Group}>
                 <div className={styles.Container}>
                     {array.map((item, index) => 

@@ -11,6 +11,7 @@ interface Props {
     side?: {
         text: React.ReactNode;
         link?: string;
+        target?: string;
         onClick?: () => void;
     }
 }
@@ -26,7 +27,7 @@ const Title = ({
                 {text.sec && <span className="opacity-70">{text.sec}</span>}
             </div>
             {side && (side?.onClick ? <button className={styles.Side} onClick={side.onClick}>{side.text}</button> :
-            side?.link ? <Link className={styles.Side} href={side.link}>{side.text}</Link> :
+            side?.link ? <Link className={styles.Side} href={side.link} target={side.target}>{side.text}</Link> :
             <div className={styles.Side}>{side.text}</div>)}
         </div>
     )

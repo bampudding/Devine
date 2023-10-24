@@ -7,14 +7,15 @@ interface Props {
     subText?: string;
     image: string;
     link?: string;
+    target?: string;
 }
 
 const Bestphoto = ({
-    text, subText, image, link
+    text, subText, image, link, target
 }: Props) => {
     return (
         <div className="GroupCard">
-            <Link href={link || ""} className={styles.Group}>
+            <Link href={link || ""} target={target} className={styles.Group}>
                 <Image priority src={image} alt="베스트포토" fill sizes="auto"/>
                 <div className={styles.Textarea}>
                     <div className={styles.Text}>{text}</div>

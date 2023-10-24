@@ -21,7 +21,7 @@
     .Container {
         display: flex;
         flex-direction: column;
-        gap: 3.6rem;
+        gap: var(--gap-tera);
         width: 100%;
         max-width: var(--vp-width-pc);
     }

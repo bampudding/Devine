@@ -5,8 +5,8 @@ import Post from "@/styles/Develoid/Post/Post";
 export default function Page() {
 
     const Notice = {
-        text: "2023년 9월 공지사항 모음",
-        link: "https://cafe.naver.com/develoid/1015078"
+        text: "2023년 10월 공지사항 모음",
+        link: "https://cafe.naver.com/develoid/1017657"
     }
 
     return (

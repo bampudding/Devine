@@ -9,14 +9,15 @@ interface Props {
     subText?: string;
     image: string;
     link?: string;
+    target?: string;
 }
 
 const Post = ({
-    text, subText, image, link
+    text, subText, image, link, target
 }: Props) => {
     return (
         <div className="GroupCard">
-            <Link href={link || ""} className={styles.Group}>
+            <Link href={link || ""} target={target} className={styles.Group}>
                 <Suspense fallback={<Loading/>}>
                     <Image priority src={image} alt={text} fill sizes="auto"/>
                 </Suspense>

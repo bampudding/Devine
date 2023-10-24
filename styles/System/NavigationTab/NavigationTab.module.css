@@ -1,5 +1,8 @@
 .GroupHeader {
     display: flex;
+    background: var(--background-blur);
+    backdrop-filter: var(--blur-default);
+    border-bottom: var(--border-default-settings);
     justify-content: center;
     align-items: center;
     width: 100%;

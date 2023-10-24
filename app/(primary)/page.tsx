@@ -1,4 +1,5 @@
 import DVLBest from "@/modules/PageData/DVLBest";
+import DVLCont from "@/modules/PageData/DVLCont";
 import Button_Link from "@/styles/Components/Button/Button";
 import Card from "@/styles/Components/Card/Card";
 import Iframe from "@/styles/Components/Iframe/Iframe";
@@ -40,7 +41,9 @@ export default function Page() {
 
             <div className="grid-col-4 gap-16">
                 <DVLBest Type="Others"/>
-            </div> 
+            </div>
+            
+            <DVLCont/>
         </>
     )
 }

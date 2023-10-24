@@ -7,24 +7,19 @@ export default function Page() {
         <>
             <Title size="h2" text={{pri: "메뉴"}}/>
             
-                    
-            <div className="GroupCard">
-                <Card icon={{icon: "Document"}} text="제휴 업무 소개서" link={{link: "http://naver.me/5IsbVWnO", pointer: true}}/>
-                <Card icon={{icon: "PersonAdd"}} text="제휴 맺기" link={{link: "https://forms.gle/31vn3DnVHsTjyc6Z7", pointer: true}}/>
-                <Card icon={{icon: "DeveloidFill"}} text="브랜드 아이덴티티" link={{link: "/brand", pointer: true}}/>
+            <div className="Content">
+                <Title size="h4" text={{pri: "디벨서비스"}}/>
+                <div className="GroupCard">
+                    <Card icon={{icon: "Document"}} text="제휴 업무 소개서" link={{link: "http://naver.me/5IsbVWnO", pointer: true}}/>
+                    <Card icon={{icon: "PersonAdd"}} text="제휴 맺기" link={{link: "https://forms.gle/31vn3DnVHsTjyc6Z7", pointer: true}}/>
+                    <Card icon={{icon: "ShoppingBagFill"}} text="디벨이벤트" link={{link: "https://cafe.naver.com/develoid/menu/604", pointer: true}}/>
+                    <Card icon={{icon: "DeveloidFill"}} text="브랜드 아이덴티티" link={{link: "/brand", pointer: true}}/>
+                </div>
             </div>
 
             <div className="LayoutAll">
 
                 <div className="LayoutLeftAll">
-
-                    <div className="Content">
-                        <Title size="h4" text={{pri: "디벨이벤트"}}/>
-                        <div className="GroupCard">
-                            <Card icon={{icon: "ShoppingBagFill"}} text="진행 중인 이벤트" link={{link: "https://cafe.naver.com/develoid/menu/604", pointer: true}}/>
-                            <Card icon={{icon: "ShoppingBagFill"}} text="종료된 이벤트" link={{link: "https://cafe.naver.com/ArticleList.nhn?search.clubid=23370764&search.menuid=604&search.boardtype=L&userDisplay=15&search.headid=2244", pointer: true}}/>
-                        </div>
-                    </div>
 
                     <div className="Content">
                         <Title size="h4" text={{pri: "디벨로이드"}}/>
