@@ -65,13 +65,13 @@ export const ThemeButtons = ({
     return (
         <div className="GroupTheme">
             {mounted &&
-                <Icon Type="Theme" Icon={IconName("Sun")} Size={16} Checked={localStorage.theme === 'light'} onClick={() => ThemeChange("light")} />
+                <Icon Icon={IconName("Sun")} Size={16} Checked={localStorage.theme === 'light'} onClick={() => ThemeChange("light")} />
             }
             
-            <Icon Type="Theme" Icon={isMobile ? IconName("Phone") : IconName("Screen")} Size={16} Checked={localStorage.theme === 'system' || !localStorage.theme} onClick={() => ThemeChange("system")} />
+            <Icon Icon={isMobile ? IconName("Phone") : IconName("Screen")} Size={16} Checked={localStorage.theme === 'system' || !localStorage.theme} onClick={() => ThemeChange("system")} />
             
             {mounted &&
-                <Icon Type="Theme" Icon={IconName("Moon")} Size={16} Checked={localStorage.theme === 'dark'} onClick={() => ThemeChange("dark")} />
+                <Icon Icon={IconName("Moon")} Size={16} Checked={localStorage.theme === 'dark'} onClick={() => ThemeChange("dark")} />
             }
         </div>
     )
