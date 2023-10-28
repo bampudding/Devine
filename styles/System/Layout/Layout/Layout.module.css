@@ -1,0 +1,12 @@
+.Group {
+    display: grid;
+    gap: var(--gap-tera);
+    height: min-content;
+}
+
+    @media (max-width: 903.98px) {
+        .Group {
+            grid-template-columns: initial !important;
+            gap: var(--gap-really-large);
+        }
+    }

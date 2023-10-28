@@ -7,75 +7,82 @@
     --color-water-hover: hsl(209, 87%, 56%);
     --color-water-pressed: hsl(209, 73%, 53%);
 
-    --color-sand-primary: hsl(40, 100%, 64%);
-    --color-sand-secondary: hsl(40, 100%, 69%);
-    --color-sand-hover: hsl(40, 79%, 58%);
-    --color-sand-pressed: hsl(39, 69%, 55%);
+    --color-sand-primary: hsl(40, 100%, 57%);
+    --color-sand-secondary: hsl(40, 100%, 58%);
+    --color-sand-hover: hsl(40, 89%, 54%);
+    --color-sand-pressed: hsl(40, 81%, 51%);
 
     --color-coral-primary: hsl(0, 100%, 64%);
     --color-coral-secondary: hsl(0, 100%, 68%);
     --color-coral-hover: hsl(0, 76%, 58%);
     --color-coral-pressed: hsl(0, 66%, 54%);
 
+    --color-muse-primary: #7e67ff;
+    --color-muse-secondary: hsl(249, 100%, 70%);
+    --color-muse-hover: hsl(249, 81%, 63%);
+    --color-muse-pressed: hsl(249, 59%, 57%);
+    --color-muse-text: hsl(249, 100%, 69%);
+    --color-muse-text-hover: hsl(249, 74%, 64%);
+    --color-muse-text-pressed: hsl(249, 55%, 54%);
+
     /* System Default */
-    --background-default: rgb(246, 246, 246);
+    --background-default: rgb(240, 242, 245);
     --background-code: rgb(224, 226, 230);
-    --background-blur: rgba(246, 246, 246, .8);
+    --background-blur: rgba(247, 247, 246, .8);
     --reversed-blur: rgba(20, 20, 20, .3);
     --nocolor-default: rgb(255, 255, 255);
     --nocolor-blur: rgba(255, 255, 255, .6);
+    --nocolor-reversed: rgb(60, 60, 60);
     --transparent-default: rgba(0, 0, 0, 0);
     --body-default: rgb(50, 50, 50);
-    --border-default: rgba(0, 0, 0, .04);
+    --border-default: rgba(0, 0, 0, .07);
     --border-default-settings: .1rem solid var(--border-default);
+    --border-transparent: 0 solid transparent;
     --border-reversed: rgba(60, 60, 60, 0.6);
     --strong-default: rgb(238, 238, 238);
 
-    --hover-default: rgba(236, 239, 243, .8);
-    --pressed-default: rgba(229, 232, 235, .8);
-    --hover-default-nav: rgba(0, 0 ,0, .05);
-    --pressed-default-nav: rgba(0, 0 ,0, .1);
-    --hover-nocolor: rgba(248, 248, 248, .8);
-    --pressed-nocolor: rgba(242, 242, 242, .8);
-    --hover-strong: rgb(225, 225, 225);
-    --pressed-strong: rgb(215, 215, 215);
-
-    /* Black Blur */
-    --white-blur: rgba(0, 0, 0, 0.3);
+    --hover-default: rgb(234, 234, 235);
+    --pressed-default: rgb(227, 227, 228);
+    --hover-nocolor: rgb(249, 249, 249);
+    --pressed-nocolor: rgb(247, 247, 247);
+    --hover-strong: rgba(225, 225, 225);
+    --pressed-strong: rgba(215, 215, 215);
 
     /* White Blur */
     --white-blur: rgba(220, 220, 220, .3);
+    --hover-white-blur: rgba(220, 220, 220, .4);
+    --pressed-white-blur: rgba(220, 220, 220, .5);
 
     /* Box Color */
     --box-icon: rgba(255, 255, 255, .2);
 
     /* Shadow Color */
-    --shadow-really-small: 0 2px 8px 2px rgba(0, 0, 0, .001);
-    --shadow-small: 0 2px 8px 2px rgba(0, 0, 0, .005);
-    --shadow-default: 0 2px 8px 2px rgba(0, 0, 0, .01);
-    --shadow-strong: 0 2px 8px 2px rgba(0, 0, 0, .02);
+    --shadow-really-small: 0 2px 8px 2px rgba(0, 0, 0, .005);
+    --shadow-small: 0 2px 8px 2px rgba(0, 0, 0, .01);
+    --shadow-default: 0 2px 8px 2px rgba(0, 0, 0, .02);
+    --shadow-strong: 0 2px 8px 2px rgba(0, 0, 0, .06);
+    --shadow-really-strong: 0 4px 12px 4px rgba(0, 0, 0, .08);
 }
 
 [data-theme="dark"] {
     /* System Default */
-    --background-default: rgb(8, 8, 8);
+    --background-default: rgb(10, 10, 12);
     --background-code: rgb(24, 24, 27);
     --background-blur: rgba(8, 8, 8, .8);
     --reversed-blur: rgba(220, 220, 220, .3);
-    --nocolor-default: rgb(14, 14, 14);
+    --nocolor-default: rgb(18, 18, 20);
     --nocolor-blur: rgba(14, 14, 14, .6);
+    --nocolor-reversed: rgb(40, 40, 40);
     --transparent-default: rgba(0, 0, 0, 0);
     --body-default: rgb(255, 255, 255);
     --border-default: rgba(50, 50, 50, .6);
     --border-reversed: rgba(0, 0, 0, .1);
     --strong-default: rgb(40, 40, 40);
 
-    --hover-default: rgba(255, 255, 255, .05);
-    --pressed-default: rgba(255, 255, 255, .1);
-    --hover-default-nav: rgba(255, 255, 255, .1);
-    --pressed-default-nav: rgba(255, 255, 255, .15);
-    --hover-nocolor: rgba(255, 255, 255, .08);
-    --pressed-nocolor: rgba(255, 255, 255, .11);
+    --hover-default: rgba(24, 24, 26);
+    --pressed-default: rgba(31, 31, 31);
+    --hover-nocolor: rgb(24, 24, 24);
+    --pressed-nocolor: rgb(34, 34, 34);
     --hover-strong: rgb(45, 45, 45);
     --pressed-strong: rgb(55, 55, 55);
 
@@ -91,15 +98,18 @@
 
 .CardActivated {
     background: var(--pressed-nocolor) !important;
-    box-shadow: var(--shadow-default) !important;
 }
+
+    .CardActivated:active {
+        background: var(--pressed-strong) !important;
+    }
 
 
 /* Coral */
 
 .Coral {
     background: var(--color-coral-primary) !important;
-    border: 0 !important;
+    border: .1rem solid transparent !important;
     color: white !important;
     fill: white !important;
     
@@ -122,7 +132,7 @@
 
     .CoralSecondary {
         background: var(--color-coral-secondary) !important;
-        border: 0 !important;
+        border: .1rem solid transparent !important;
         color: white !important;
         fill: white !important;
         
@@ -148,14 +158,14 @@
 
 .Sand {
     background: var(--color-sand-primary) !important;
-    border: 0 !important;
-    color: black !important;
-    fill: black !important;
+    border: .1rem solid transparent !important;
+    color: white !important;
+    fill: white !important;
     
 }
     .Sand * {
-        color: black !important;
-        fill: black !important;
+        color: white !important;
+        fill: white !important;
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -170,15 +180,15 @@
 
     .SandSecondary {
         background: var(--color-sand-secondary) !important;
-        border: 0 !important;
-        color: black !important;
-        fill: black !important;
+        border: .1rem solid transparent !important;
+        color: white !important;
+        fill: white !important;
         
     }
 
         .SandSecondary * {
-            color: black !important;
-            fill: black !important;
+            color: white !important;
+            fill: white !important;
         }
     
         @media (hover: hover) and (pointer: fine) {
@@ -196,7 +206,7 @@
 
 .Water {
     background: var(--color-water-primary) !important;
-    border: 0 !important;
+    border: .1rem solid transparent !important;
     color: white !important;
     fill: white !important;
     
@@ -219,7 +229,7 @@
 
     .WaterSecondary {
         background: var(--color-water-secondary) !important;
-        border: 0 !important;
+        border: .1rem solid transparent !important;
         color: white !important;
         fill: white !important;
         
@@ -239,3 +249,189 @@
         .WaterSecondary:active {
             background: var(--color-water-hover) !important;
         }
+     
+
+/* Muse */
+   
+.Muse {
+    background: var(--color-muse-primary) !important;
+    border: .1rem solid transparent !important;
+    color: white !important;
+    fill: white !important;
+    
+}
+
+    .Muse * {
+        color: white !important;
+        fill: white !important;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .Muse:hover {
+            background: var(--color-muse-hover) !important;
+        }
+    }
+
+    .Muse:active {
+        background: var(--color-muse-pressed) !important;
+    }
+
+    .MuseSecondary {
+        background: var(--color-muse-secondary) !important;
+        border: .1rem solid transparent !important;
+        color: white !important;
+        fill: white !important;
+        
+    }
+
+        .MuseSecondary * {
+            color: white !important;
+            fill: white !important;
+        }
+    
+        @media (hover: hover) and (pointer: fine) {
+            .MuseSecondary:hover {
+                background: var(--color-muse-primary) !important;
+            }
+        }
+
+        .MuseSecondary:active {
+            background: var(--color-muse-hover) !important;
+        }
+
+
+/* CoralColor */
+
+.CoralColor {
+    color: var(--color-coral-primary) !important;
+    
+}
+
+    @media (hover: hover) and (pointer: fine) {
+        .CoralColor:hover {
+            color: var(--color-coral-hover) !important;
+        }
+    }
+
+    .CoralColor:active {
+        color: var(--color-coral-pressed) !important;
+    }
+
+    .CoralSecondaryColor {
+        color: var(--color-coral-secondary) !important;
+        
+    }
+    
+        @media (hover: hover) and (pointer: fine) {
+            .CoralSecondaryColor:hover {
+                color: var(--color-coral-primary) !important;
+            }
+        }
+    
+        .CoralSecondaryColor:active {
+            color: var(--color-coral-hover) !important;
+        }
+        
+
+/* SandColor */
+
+.SandColor {
+    color: var(--color-sand-primary) !important;
+    
+}
+
+    @media (hover: hover) and (pointer: fine) {
+        .SandColor:hover {
+            color: var(--color-sand-hover) !important;
+        }
+    }
+    
+    .SandColor:active {
+        color: var(--color-sand-pressed) !important;
+    }
+
+    .SandSecondaryColor {
+        color: var(--color-sand-secondary) !important;
+        
+    }
+    
+        @media (hover: hover) and (pointer: fine) {
+            .SandSecondaryColor:hover {
+                color: var(--color-sand-primary) !important;
+            }
+        }
+    
+        .SandSecondaryColor:active {
+            color: var(--color-sand-hover) !important;
+        }
+    
+
+/* WaterColor */
+
+.WaterColor {
+    color: var(--color-water-primary) !important;
+    
+}
+
+    @media (hover: hover) and (pointer: fine) {
+        .WaterColor:hover {
+            color: var(--color-water-hover) !important;
+        }
+    }
+    
+    .WaterColor:active {
+        color: var(--color-water-pressed) !important;
+    }
+
+    .WaterSecondaryColor {
+        color: var(--color-water-secondary) !important;
+        
+    }
+    
+        @media (hover: hover) and (pointer: fine) {
+            .WaterSecondaryColor:hover {
+                color: var(--color-water-primary) !important;
+            }
+        }
+    
+        .WaterSecondaryColor:active {
+            color: var(--color-water-hover) !important;
+        }
+     
+
+/* MuseColor */
+   
+.MuseColor {
+    color: var(--color-muse-primary) !important;
+    
+}
+
+    @media (hover: hover) and (pointer: fine) {
+        .MuseColor:hover {
+            color: var(--color-muse-hover) !important;
+        }
+    }
+
+    .MuseColor:active {
+        color: var(--color-muse-pressed) !important;
+    }
+
+    .MuseSecondaryColor {
+        color: var(--color-muse-secondary) !important;
+        
+    }
+    
+        @media (hover: hover) and (pointer: fine) {
+            .MuseSecondaryColor:hover {
+                color: var(--color-muse-primary) !important;
+            }
+        }
+
+        .MuseSecondaryColor:active {
+            color: var(--color-muse-hover) !important;
+        }
+
+
+.Subway {
+    margin: 0o;
+}

@@ -1,0 +1,92 @@
+.Group {
+    display: flex;
+    gap: var(--box-gap);
+    width: 100%;
+}
+
+    @media (max-width: 903.98px) {
+        .Group {
+            gap: calc(.8 * var(--box-gap));
+        }
+    }
+
+    .Grid {
+        display: grid !important;
+        grid-auto-flow: dense;
+        align-content: flex-start;
+    }
+
+    .gridTwo {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+        @media (max-width: 303.98px) {
+            .gridTwo {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+    .gridTwoFlex {
+        display: flex !important;
+        flex-wrap: wrap;
+    }
+    
+        .gridTwoFlex > * {
+            flex: 33.3%;
+        }
+
+    .gridThree {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+        @media (max-width: 459.98px) {
+            .gridThree {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+    .gridThreeFlex {
+        display: flex !important;
+        flex-wrap: wrap;
+    }
+    
+        .gridThreeFlex > * {
+            flex: 25%;
+        }
+
+    .gridFour {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+        @media (max-width: 903.98px) {
+            .gridFour {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 459.98px) {
+            .gridFour {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 303.98px) {
+            .gridFour {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+    .gridFourFlex {
+        display: flex !important;
+        flex-wrap: wrap;
+    }
+    
+        .gridFourFlex > * {
+            flex: 20%;
+        }
+
+@media (max-width: 399.98px) {
+    .strict {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -9,7 +9,6 @@
         flex-direction: column;
         letter-spacing: -.04rem;
         line-height: var(--line-height-docs);
-        margin: -.8rem 0;
     }
     .h1 {
         padding-bottom: var(--padding-large);

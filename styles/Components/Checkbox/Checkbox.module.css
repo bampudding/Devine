@@ -1,20 +1,33 @@
+/* 필터가 아닐 때 */
 .Group {
     display: flex;
     align-items: center;
-    width: max-content;
+    flex: 1;
     gap: var(--gap-really-small);
 }
+
+    /* Type === "Checkbox" */
 
     .Checkbox {
         position: relative;
         min-width: 2.4rem;
         width: 50%;
         max-width: max-content;
-        border-radius: var(--radius-default);
+        border-radius: var(--radius-small);
         border: var(--border-default-settings);
         box-shadow: var(--shadow-really-small);
-        transition: var(--transition);
     }
+
+        @media (hover: hover) and (pointer: fine) {
+            .Checkbox:hover {
+                background: var(--hover-nocolor);
+            }
+        }
+
+        .Checkbox:active {
+            background: var(--pressed-nocolor);
+            transform: var(--card-scalex2);
+        }
         
         .Checkbox::after {
             display: block;
@@ -22,23 +35,7 @@
             padding-bottom: 100%;
         }
 
-        @media (hover: hover) and (pointer: fine) {
-            .Checkbox:hover {
-                background: var(--hover-default);
-                box-shadow: var(--shadow-small);
-            }
-        }
-
-        .Checkbox:active {
-            background: var(--pressed-default);
-            box-shadow: var(--shadow-default);
-        }
-
-        .Checkbox:disabled {
-            background: var(--pressed-strong);
-        }
-
-        .Input:checked ~ .Checkbox {
+        input:checked ~ .Checkbox {
             background: var(--color-muse-primary);
             background-image: url(/images/check_white.svg) !important;
             background-repeat: no-repeat;
@@ -48,23 +45,28 @@
             color: white;
         }
 
-    .Radio {
-        border-radius: var(--radius-circle);
-    }
+            @media (hover: hover) and (pointer: fine) {
+                input:checked ~ .Checkbox:hover {
+                    background-color: var(--color-muse-hover);
+                }
+            }
 
-        .Input:checked ~ .Radio {
-            background: 2rem circle;
-        }
+            input:checked ~ .Checkbox:active {
+                background-color: var(--color-muse-pressed);
+                transform: var(--card-scalex2);
+            }
 
+
+    /* Type === "Toggle" */
     .Toggle {
         display: flex;
         align-items: center;
         width: 4.8rem;
         height: 2.8rem;
         padding: .4rem;
-        background: var(--background-default);
+        background: var(--nocolor-default);
         border-radius: var(--radius-circle);
-        border: .2rem solid var(--border-default);
+        border: .1rem solid var(--border-default);
         transition: var(--transition);
     }
 
@@ -73,8 +75,8 @@
             width: 50%;
             background: var(--color-muse-primary);
             border-radius: var(--radius-circle);
-            transition: var(--transition);
             box-shadow: var(--shadow-really-small);
+            transition: var(--transition);
         }
         
             .ToggleCircle::after {
@@ -86,259 +88,73 @@
             @media (hover: hover) and (pointer: fine) {
                 .ToggleCircle:hover {
                     background: var(--color-muse-hover);
-                    box-shadow: var(--shadow-small);
                 }
             }
 
             .ToggleCircle:active {
                 background: var(--color-muse-pressed);
-                box-shadow: var(--shadow-default);
+                transform: var(--card-scalex2);
             }
 
-            .Input:checked ~ .Toggle {
+            input:checked ~ .Toggle {
                 background: var(--color-muse-primary);
             }
 
-            .Input:checked ~ .Toggle > .ToggleCircle {
-                background: var(--background-default);
+            input:checked ~ .Toggle > .ToggleCircle {
+                background: var(--nocolor-default);
                 transform: translateX(100%);
-                box-shadow: var(--shadow-default);
             }
 
                 @media (hover: hover) and (pointer: fine) {
-                    .Input:checked ~ .Toggle > .ToggleCircle:hover {
-                        background: var(--hover-default);
-                        box-shadow: var(--shadow-small);
+                    input:checked ~ .Toggle > .ToggleCircle:hover {
+                        background: var(--hover-nocolor);
                     }
                 }
 
-                .Input:checked ~ .Toggle > .ToggleCircle:active {
-                    background: var(--pressed-default);
-                    box-shadow: var(--shadow-default);
+                input:checked ~ .Toggle > .ToggleCircle:active {
+                    background: var(--pressed-nocolor);
+                    transform: translateX(100%) var(--card-scalex2);
                 }
-            
 
-    .Text {
+
+/* 필터일 때 */
+/* Type === "Filter" */
+
+.Filter {
+    display: flex;
+    justify-content: center;
+    padding: var(--card-padding);
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
+    border: var(--card-border);
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    box-shadow: var(--shadow-really-small);
+    transition: var(--transition);
+}
+
+    @media (hover: hover) and (pointer: fine) {
+        .Filter:hover {
+            background: var(--hover-nocolor);
+        }
+    }
+
+    .Filter:active {
+        background: var(--pressed-nocolor);
+        transform: var(--card-scalex2);
+    }
+
+    .Filter div {
         font-size: var(--font-size-interaction-default);
-        font-weight: var(--font-weight-medium);
-        transition: var(--transition);
-        padding-top: .1rem;
     }
 
-.GroupFilter {
-    display: flex;
-    justify-content: center;
-    padding: var(--padding-small);
-    background: var(--nocolor-default);
-    border-radius: var(--radius-default);
-    border: var(--border-default-settings);
-    text-align: center;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: var(--transition-nocolor);
-    box-shadow: var(--shadow-really-small);
-}
-
-    .Small {
-        padding: var(--padding-small) !important;
-    }
-
-    @media (max-width: 767.98px) {
-        .GroupFilter {
-            padding: var(--padding-default);
+    @media (max-width: 903.98px) {
+        .Filter {
+            border-radius: var(--radius-circle);
         }
-    }
 
-    @media (hover: hover) and (pointer: fine) {
-        .GroupFilter:hover {
-            background: var(--hover-nocolor);
-            box-shadow: var(--shadow-small);
+        .Filter div {
+            font-size: var(--font-size-interaction-small);
         }
-    }
-
-    .GroupFilter:active {
-        background: var(--pressed-nocolor);
-        box-shadow: var(--shadow-default);
-    }
-
-    .GroupFilter:has(.Input:disabled) {
-        background: var(--nocolor-default);
-        cursor: default;
-    }
-
-    .GroupFilter:has(.Input:checked) {
-        background: var(--color-muse-primary) !important;
-        box-shadow: var(--shadow-default);
-        color: white;
-    }    
-
-    @media (hover: hover) and (pointer: fine) {
-        .GroupFilter:has(.Input:checked):hover {
-            background: var(--color-muse-hover) !important;
-            box-shadow: var(--shadow-small);
-        }
-    }
-
-    .GroupFilter:has(.Input:checked):active {
-        background: var(--color-muse-pressed) !important;
-        box-shadow: var(--shadow-default);
-        color: white;
-    }
-    
-    .Input {
-        position: absolute;
-        width: 0;
-        height: 0;
-    }
-
-    .FilterText {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-
-.GroupFilter {
-    display: flex;
-    justify-content: center;
-    padding: var(--padding-small);
-    background: var(--nocolor-default);
-    border-radius: var(--radius-default);
-    border: var(--border-default-settings);
-    text-align: center;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: var(--transition-nocolor);
-    box-shadow: var(--shadow-really-small);
-}
-
-    .Small {
-        padding: var(--padding-small) !important;
-    }
-
-    @media (max-width: 767.98px) {
-        .GroupFilter {
-            padding: var(--padding-default);
-        }
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-        .GroupFilter:hover {
-            background: var(--hover-nocolor);
-            box-shadow: var(--shadow-small);
-        }
-    }
-
-    .GroupFilter:active {
-        background: var(--pressed-nocolor);
-        box-shadow: var(--shadow-default);
-    }
-
-    .GroupFilter:has(.Input:disabled) {
-        background: var(--nocolor-default);
-        cursor: default;
-    }
-
-    .GroupFilter:has(.Input:checked) {
-        background: var(--color-muse-primary) !important;
-        box-shadow: var(--shadow-default);
-        color: white;
-    }    
-
-    @media (hover: hover) and (pointer: fine) {
-        .GroupFilter:has(.Input:checked):hover {
-            background: var(--color-muse-hover) !important;
-            box-shadow: var(--shadow-small);
-        }
-    }
-
-    .GroupFilter:has(.Input:checked):active {
-        background: var(--color-muse-pressed) !important;
-        box-shadow: var(--shadow-default);
-        color: white;
-    }
-    
-    .Input {
-        position: absolute;
-        width: 0;
-        height: 0;
-    }
-
-    .FilterText {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-
-.GroupSettings {
-    display: flex;
-    justify-content: center;
-    padding: var(--padding-default);
-    background: var(--nocolor-default);
-    border-radius: var(--radius-default);
-    border: var(--border-default-settings);
-    text-align: center;
-    white-space: nowrap;
-    cursor: pointer;
-    transition: var(--transition-nocolor);
-    box-shadow: var(--shadow-really-small);
-}
-
-    .Small {
-        padding: var(--padding-small) !important;
-    }
-
-    @media (max-width: 767.98px) {
-        .GroupSettings {
-            padding: var(--padding-default);
-        }
-    }
-
-    @media (hover: hover) and (pointer: fine) {
-        .GroupSettings:hover {
-            background: var(--hover-nocolor);
-            box-shadow: var(--shadow-small);
-        }
-    }
-
-    .GroupSettings:active {
-        background: var(--pressed-nocolor);
-        box-shadow: var(--shadow-default);
-    }
-
-    .GroupSettings:has(.Input:disabled) {
-        background: var(--nocolor-default);
-        cursor: default;
-    }
-
-    .GroupSettings:has(.Input:checked) {
-        box-shadow: var(--shadow-default);
-        color: white;
-    }    
-
-    @media (hover: hover) and (pointer: fine) {
-        .GroupSettings:has(.Input:checked):hover {
-            box-shadow: var(--shadow-small);
-        }
-    }
-
-    .GroupSettings:has(.Input:checked):active {
-        box-shadow: var(--shadow-default);
-        color: white;
-    }
-    
-    .Input {
-        position: absolute;
-        width: 0;
-        height: 0;
-    }
-
-    .SettingsText {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 1rem;
     }

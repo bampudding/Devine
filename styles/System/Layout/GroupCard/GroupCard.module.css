@@ -1,0 +1,97 @@
+.Group {
+    border-radius: var(--card-radius);
+    border: var(--card-border);
+    overflow: hidden;
+    width: 100%;
+}
+
+.Group > * {
+    display: flex;
+    border: unset;
+    border-radius: 0 !important;
+    box-shadow: var(--card-shadow) !important;
+    overflow: hidden;
+}
+
+    .Group > a, .Group > button {
+        cursor: pointer;
+    }
+
+
+    .Group > * > * {
+        background: unset;
+        border: unset;
+        border-radius: 0;
+        box-shadow: unset;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .Group > *:hover {
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .Group > a:hover, .Group > button:hover {
+            background: var(--card-bg-hover);
+            box-shadow: var(--card-shadow-hover);
+        }
+    }
+
+    .Group > *:active {
+        box-shadow: var(--card-shadow-active);
+    }
+
+    .Group > a:active, .Group > button:active {
+        background: var(--card-bg-active);
+    }
+
+    .Group > *:not(:first-child) {
+        border-top: var(--card-border);
+    }
+
+    .LikeBox {
+        background: var(--box-bg);
+        border-radius: var(--box-radius);
+        box-shadow: var(--box-shadow);
+        border: 0;
+        transition: var(--transition-bg);
+    }
+
+        .LikeBox > * {
+            padding: 0 !important;
+        }
+
+        .LikeBox > * > * {
+            padding: var(--box-padding) !important;
+        }
+
+    .NoBorder {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-nano);
+        border: 0 !important;
+        overflow: visible;
+    }
+
+        .NoBorder > * {
+            margin-right: calc(-1 * var(--card-padding)) !important;
+            margin-left: calc(-1 * var(--card-padding)) !important;
+            width: calc(100% + 2 * var(--card-padding)) !important;
+            border-radius: var(--card-radius) !important;
+            border-top: 0 !important;
+            border: 0;
+            box-shadow: unset !important;
+            overflow: initial;
+            transition: var(--transition-nocolor);
+        }
+
+            .NoBorder > *:active {
+                transform: var(--card-scale);
+            }
+
+        .NoBorder > *:first-child {
+            margin-top: calc(-1 * var(--card-padding));
+        }
+
+        .NoBorder > *:last-child {
+            margin-bottom: calc(-1 * var(--card-padding));
+        }

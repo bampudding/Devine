@@ -24,6 +24,7 @@ const NavigationTab = ({
     const headerText = (
         pathname === '/' ? '디벨서비스' :
         pathname === '/support' ? '디벨서포트' :
+        pathname === '/admin/cafefront' ? '카페 대문 편집기' :
         array.find(item => pathname === item.link)?.text
     );
     

@@ -1,0 +1,66 @@
+.Group {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-small);
+}
+
+
+/* Radio Type === "Select" */
+
+.Select {
+    display: flex;
+    color: var(--body-default) !important;
+    justify-content: center;
+    padding: var(--padding-default);
+    background: var(--nocolor-default);
+    border-radius: var(--card-radius);
+    border: var(--card-border);
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    box-shadow: var(--shadow-really-small);
+    transition: var(--transition);
+}
+
+    @media (hover: hover) and (pointer: fine) {
+        .Select:hover {
+            background: var(--hover-nocolor);
+        }
+    }
+
+    .Select:active {
+        background: var(--pressed-nocolor);
+        transform: var(--card-scale);
+    }
+
+    input:checked ~ .Select {
+        background: var(--color-muse-primary);
+    }
+
+        @media (hover: hover) and (pointer: fine) {
+            input:checked ~ .Select:hover {
+                background-color: var(--color-muse-hover);
+            }
+        }
+
+        input:checked ~ .Select:active {
+            background-color: var(--color-muse-pressed);
+        }
+
+
+/* 이미지가 들어간 경우 */
+
+.Image {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+    .ImageData {
+        object-fit: cover;
+        object-position: center;
+        position: relative !important;
+        width: auto;
+        height: 100%;
+        border-radius: var(--radius-default);
+        margin: 0;
+    }
