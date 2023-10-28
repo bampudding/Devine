@@ -64,7 +64,7 @@ export default function Page() {
     const ExportTime = year + "년 " + month + "월 " + day + "일 " + hour + "시 " + min + "분 " + sec + "초";
     console.log(ExportTime)
 
-    const SavedName = data.purpose === "디벨로이드" ? "Develoid" : "DevelPlay" + "-" + year + "" + month + "" + day + "_" + hour + "" + min + "" + sec;
+    const SavedName =  year + "" + month + "" + day + "_" + hour + "" + min + "" + sec;
     console.log(SavedName)
 
     const Remove = () => {
