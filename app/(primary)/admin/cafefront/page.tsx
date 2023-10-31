@@ -11,11 +11,11 @@ import Title from "@/styles/Components/Title/Title";
 import Grid from "@/styles/System/Layout/Grid/Grid";
 import GroupBox from "@/styles/System/Layout/GroupBox/GroupBox";
 import GroupButton from "@/styles/System/Layout/GroupButton/GroupButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "@/styles/StyleSheet/Admin/CafeFront.module.css"
 
 type Type = {
-    purpose?: ["디벨로이드", "디벨플레이"],
+    purpose: "디벨로이드" | "디벨플레이",
     date?: string,
     changelog?: React.ReactNode,
     partner?: {
@@ -51,29 +51,42 @@ type Type = {
 export default function Page() {
 
     const [data, setData] = useState<Type>({
+        purpose: "디벨로이드",
+        date: ''
     });
 
-    var date = new Date();
-    var year = date.getFullYear();
-    var month = date.getMonth() + 1;
-    var day = date.getDate();
-    var hour = date.getHours();
-    var min = date.getMinutes();
-    var sec = date.getSeconds();
-    
-    const ExportTime = year + "년 " + month + "월 " + day + "일 " + hour + "시 " + min + "분 " + sec + "초";
-    console.log(ExportTime)
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            const date = new Date();
+            const year = date.getFullYear();
+            const month = date.getMonth() + 1;
+            const day = date.getDate();
+            const hour = date.getHours();
+            const min = date.getMinutes();
+            const sec = date.getSeconds();
+            
+            const ExportTime = year + "년 " + month + "월 " + day + "일 " + hour + "시 " + min + "분 " + sec + "초";
+            
+            setData(prevData => ({...prevData, date: ExportTime}));
+        }, 1000);
 
-    const SavedName =  year + "" + month + "" + day + "_" + hour + "" + min + "" + sec;
-    console.log(SavedName)
+        return () => {
+            clearInterval(intervalId);
+        }
+    }, []);
 
     const Remove = () => {
 
     }
 
     const More = () => {
-
+        
     }
+
+    const handleValueChange = (selectedValue: any) => {
+        setData({purpose: selectedValue})
+    };
+    
 
     return (
         <>
@@ -83,17 +96,21 @@ export default function Page() {
             <GroupBox type="MaintainedBox">
                 <Title size="h4" text={{pri: "문서에 대한 설명"}}/>
                 <Grid grid={2}>
-                    <Select label="사용 목적" value={data.purpose}/>
+                    {/* 사용 목적 (purpose) */}
+                    <Select label="사용 목적" value={data.purpose} options={["디벨로이드", "디벨플레이"]} onValueChange={handleValueChange}/>
+                    {/* 현재 날짜 (date) */}
                     <Input label="만든 날짜" readOnly value={data.date}/>
                 </Grid>
+                <Input label="현재 날짜" readOnly value={data.date}/>
+                {/* 수정 사항 (changelog) */}
                 <Textarea label="수정 사항" value={data.changelog}/>
             </GroupBox>
 
             
-            {/* 디벨파트너 */}
+            {/* 디벨파트너 (partner) */}
             <GroupBox type="MaintainedBox">
                 <Title size="h4" text={{pri: "디벨파트너"}}/>
-                {/* 1단 */}
+                {/* 1단 (partner.single) */}
                 <GroupBox>
                     <Title size="h6" text={{pri: "1단"}} side={{text: "추가"}}/>
                     <GroupButton strict>
@@ -105,7 +122,7 @@ export default function Page() {
                         </div>
                     </GroupButton>
                 </GroupBox>
-                {/* 2단 */}
+                {/* 2단 (partner.dual) */}
                 <GroupBox>
                     <Title size="h6" text={{pri: "2단"}} side={{text: "추가"}}/>
                     <GroupButton strict>
@@ -128,7 +145,7 @@ export default function Page() {
             </GroupBox>
 
             
-            {/* 디벨스폰서 */}
+            {/* 디벨스폰서 (sponsor) */}
             <GroupBox type="MaintainedBox">
                 <Title size="h4" text={{pri: "디벨스폰서"}}/>
                 <GroupButton strict>
@@ -149,13 +166,15 @@ export default function Page() {
             </GroupBox>
 
 
-            {/* 바로가기 */}
+            {/* 바로가기 (shortcut) */}
             <GroupBox type="MaintainedBox">
+                {/* 서브 타이틀 (shortcut.subtitle) */}
                 <Title size="h4" text={{pri: "바로가기"}} side={{text: "버튼 추가"}}/>
                 <Grid grid={2}>
                     <Input label="서브 타이틀 제목" value={data.shortcut?.subtitle?.title}/>
                     <Input label="서브 타이틀 링크" value={data.shortcut?.subtitle?.link}/>
                 </Grid>
+                {/* 버튼 (shortcut.button) */}
                 <GroupButton strict>
                     <Input label="버튼 제목"/>
                     <Input label="버튼 링크"/>
@@ -167,7 +186,7 @@ export default function Page() {
             </GroupBox>
 
 
-            {/* 푸터 */}
+            {/* 푸터 (footer) */}
             <GroupBox type="MaintainedBox">
                 <Title size="h4" text={{pri: "푸터"}}/>
                 <Input label="내용" value={data.footer?.description}/>

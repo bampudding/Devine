@@ -6,33 +6,23 @@ import { useState } from 'react';
 
 interface Props {
     label?: string;
-    value?: string[];
-    onClick?: () => void;
+    value: string | number;
+    options: any[];
+    onValueChange: (value: string | number) => void;
 }
 
 const Select = ({
-    label, value
+    label, value, options, onValueChange
 }: Props) => {
-    const initialValue = Array.isArray(value) ? value[0] : value;
-
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedValue, setSelectedValue] = useState<string | number | undefined>(initialValue);
 
     const toggleSelect = () => {
         setIsOpen(prev => !prev);
     }
 
     const handleMenuItemClick = (val: string | number) => {
-        setSelectedValue(val);
-        toggleSelect();
-    }
-
-    let menuItems: (string | number)[] = [];
-
-    if (Array.isArray(value)) {
-        menuItems = value;
-    } else if (value !== undefined) {
-        menuItems = [value];
+        setIsOpen(false);
+        onValueChange(val);
     }
 
     return (
@@ -41,7 +31,7 @@ const Select = ({
                 <div className={styles.GroupInput}>
                     {label && <div className={styles.Label}>{label}</div>}
                     <div className={styles.GroupSelect}>
-                        <div className={styles.Select}>{selectedValue}</div>
+                        <div className={styles.Select}>{value}</div>
                     </div>
                 </div>
                 <div style={{ opacity: 0.4 }}>
@@ -50,10 +40,11 @@ const Select = ({
             </div>
             {isOpen &&
                 <div className={styles.Menu}>
-                    {menuItems.map(item =>
-                        <div key={item.toString()} className={`${styles.MenuData} ${item === selectedValue && styles.MenuDataFocused}`} onClick={() => handleMenuItemClick(item)}>
+                    {options.map(item =>
+                        <label key={item.toString()} className={`${styles.MenuData} ${item === value && styles.MenuDataFocused}`}>
+                            <input type='radio' style={{display: "none"}} onChange={() => handleMenuItemClick(item)}/>
                             {item}
-                        </div>
+                        </label>
                     )}
                 </div>
             }
@@ -61,5 +52,4 @@ const Select = ({
     );
 };
 
-export default Select
-
+export default Select;

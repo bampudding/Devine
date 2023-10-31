@@ -5,6 +5,9 @@ import SystemAlert from "@/styles/Components/SystemAlert/SystemAlert";
 import Title from "@/styles/Components/Title/Title";
 import Brand from "@/styles/Develoid/Brand/Brand";
 import styles from "@/styles/Develoid/Brand/Brand.module.css";
+import Grid from "@/styles/System/Layout/Grid/Grid";
+import GroupBox from "@/styles/System/Layout/GroupBox/GroupBox";
+import Layout from "@/styles/System/Layout/Layout/Layout";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 
@@ -41,13 +44,13 @@ export default function Page() {
         <>
             <Title size="h2" text={{pri: "브랜드 아이덴티티"}}/>
 
-            <div className="LayoutLeftHome">
+            <Layout>
 
-                <div className="Content">
-                    <div className="column gap-16">
+                <GroupBox>
+                    <GroupBox style={{gap: "var(--gap-small)"}}>
                         <Title size="h4" text={{pri: "로고"}}/>
                         <SmallText Text="심볼과 시그니처 또는 로고타입 전용으로 사용할 수 있습니다."/>
-                    </div>
+                    </GroupBox>
                     
                     {themeLoaded &&
                         <div className={styles.GridLogo}>
@@ -59,20 +62,20 @@ export default function Page() {
                         </div>
                     }
 
-                </div>
+                </GroupBox>
 
-                <div className="Content">
+                <GroupBox>
                     <Title size="h4" text={{pri: "컬러 팔레트"}}/>
                     
-                    <div className="grid-col-3_def gap-16">
+                    <Grid grid={3}>
                         <Brand type="color" text={<>Develoid<br/>Blue</>} subText={{hex: "#1F84FF", rgb: "R31 G132 B255"}} onClick={() => copyToClipboard("#1F84FF")}/>
                         <Brand type="color" text={<>Dynamic<br/>Violet</>} subText={{hex: "#6F53E0", rgb: "R121 G53 B255"}} onClick={() => copyToClipboard("#6F53E0")}/>
                         <Brand type="color" text={<>Dynamic<br/>Coral</>} subText={{hex: "#E56A6A", rgb: "R229 G106 B106"}} onClick={() => copyToClipboard("#E56A6A")}/>
-                    </div>
+                    </Grid>
 
-                </div>
+                </GroupBox>
                 
-            </div>
+            </Layout>
             
             {showSystemAlert && <SystemAlert Icon="Clipboard" Text="HEX 값을 클립보드에 복사했어요."/>}
         </>
