@@ -1,6 +1,5 @@
 .Group {
     display: flex;
-    align-items: center;
     gap: var(--box-gap);
     width: 100%;
 }
@@ -8,12 +7,6 @@
     @media (max-width: 903.98px) {
         .Group {
             gap: calc(.8 * var(--box-gap));
-        }
-    }
-
-    @media (max-width: 459.98px) {
-        .Group {
-            display: grid;
         }
     }
 
@@ -91,9 +84,3 @@
         .gridFourFlex > * {
             flex: 20%;
         }
-    
-@media (max-width: 399.98px) {
-    .strict {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}

@@ -8,92 +8,16 @@
     /* Header Height */
     --header-height: 7.2rem;
 
-    /* Box */
-    --box-bg: var(--nocolor-default);
-    --box-bg-hover: var(--hover-nocolor);
-    --box-bg-active: var(--pressed-nocolor);
-    --box-bg-strong: var(--strong-nocolor);
-    --box-gap: var(--gap-slightly-large);
-    --box-padding: var(--padding-great-large);
-    --box-radius: var(--radius-really-large);
-    --box-border: var(--border-default-settings);
-    --box-shadow: var(--shadow-really-small);
-    --box-shadow-hover: var(--shadow-small);
-    --box-shadow-active: var(--shadow-really-small);
-    --box-transition: var(--transition-nocolor);
-
-    /* Card */
-    --card-bg: var(--nocolor-default);
-    --card-bg-hover: var(--hover-nocolor);
-    --card-bg-active: var(--pressed-nocolor);
-    --card-bg-strong: var(--strong-nocolor);
-    --card-gap: var(--gap-slightly-small);
-    --card-gap-row: var(--gap-small);
-    --card-padding: var(--padding-default);
-    --card-radius: var(--radius-large);
-    --card-border: var(--border-default-settings);
-    --card-shadow: var(--shadow-really-small);
-    --card-shadow-hover: var(--shadow-small);
-    --card-shadow-active: var(--shadow-really-small);
-    --card-transition: var(--transition-nocolor);
-    --card-scale: scaleX(.98) scaleY(.98);
-    --card-scalex2: scaleX(.96) scaleY(.96);
-    --card-disabled: .4;
-    --card-error-bg: rgba(255, 64, 64, .1) !important;
-    --card-error-outline: .2rem solid rgba(255, 64, 64, .6) !important;
-    --card-error-bg-hover: rgba(255, 64, 64, .15) !important;
-    --card-error-bg-active: rgba(255, 64, 64, .2) !important;
-    --card-error-bg-strong: rgba(255, 64, 64, .25) !important;
-    --card-placeholder: .6;
-
+    /* Radius */
+    --hds-radius: 1.2rem;
 
     /* Padding */
-    --padding-huge: 4.8rem;
-    --padding-really-large: 3.6rem;
-    --padding-great-large: 2.8rem;
-    --padding-large: 2.4rem;
-    --padding-slightly-large: 2rem;
-    --padding-default: 1.6rem;
-    --padding-slightly-small: 1.4rem;
-    --padding-small: 1.2rem;
-    --padding-really-small: .8rem;
-    --padding-nano: .6rem;
-    --padding-pico: .4rem;
-
-    /* Gap */
-    --gap-tera: 3.6rem;
-    --gap-really-large: 2.4rem;
-    --gap-slightly-large: 2rem;
-    --gap-large: 1.6rem;
-    --gap-default: 1.2rem;
-    --gap-slightly-small: 1rem;
-    --gap-small: .8rem;
-    --gap-really-small: .6rem;
-    --gap-nano: .4rem;
-    --gap-pico: .2rem;
+    --hds-padding: 2rem;
 
     /* Blur */
-    --blur-strong: blur(1.6rem);
-    --blur-default: blur(.8rem);
-    --blur-weak: blur(.4rem);
-
-    /* Radius */
-    --radius-circle: 12.8rem;
-    --radius-really-large: 2.4rem;
-    --radius-large: 1.6rem;
-    --radius-slightly-large: 1.2rem;
-    --radius-default: .8rem;
-    --radius-slightly-small: .6rem;
-    --radius-small: .4rem;
-    --radius-really-small: .2rem;
-
-    /* Transition */
-    --transition: fill .4s ease-out, box-shadow .4s ease-out, color .4s ease-out, background .4s ease-out, border .4s ease-out, filter .4s ease-out, opacity .4s ease-out, width .4s ease-out, height .4s ease-out, visibility .4s ease-out, font-size .4s ease-out, font-weight .4s ease-out, letter-spacing .4s ease-out, line-height .4s ease-out, top .4s ease-out, transform .4s ease-out, border-radius .4s ease-out, padding .4s ease-out;
-    --transition-size: width 2.8s ease-out, height 2.8s ease-out;
-    --transition-bg: background .4s ease-out;
-    --transition-nocolor: background .4s ease-out, border .4s ease-out, width .4s ease-out, height .4s ease-out, padding .4s ease-out, box-shadow .4s ease-out, transform .4s ease-out;
-    --transition-nocolor-noborder:background .4s ease-out, width .4s ease-out, height .4s ease-out, padding .4s ease-out, box-shadow .4s ease-out, transform .4s ease-out;
-    --transition-noborder: background .4s ease-out, color .4s ease-out, width .4s ease-out, height .4s ease-out, padding .4s ease-out, box-shadow .4s ease-out, transform .4s ease-out;
+    --hds-blur-strong: blur(1.6rem);
+    --hds-blur-default: blur(.8rem);
+    --hds-blur-weak: blur(.4rem);
 }
 
 *,
@@ -112,14 +36,13 @@
 }
 
 html {
-    background: var(--background-default);
-    color: var(--body-default);
+    background: var(--hds-background);
+    color: var(--hds-color-data);
     font-size: var(--font-size);
     letter-spacing: var(--letter-spacing-defualt);
 	font-variation-settings: 'rond' 3, 'edpt' 1;
     vertical-align: top;
     line-height: 1;
-    transition: background .4s ease-out;
 }
 
 body {
@@ -141,10 +64,10 @@ a {
 }
 
 img {
+    background: var(--hds-background-stock);
     -webkit-user-drag: none !important;
     -moz-user-drag: none !important;
     -o-user-drag: none !important;
-    user-drag: none !important;
     -webkit-user-select: none !important;
     -moz-user-select: none !important;
     -ms-user-select: none !important;
@@ -152,8 +75,8 @@ img {
 }
 
 button {
-    background: inherit;
-    color: var(--body-default);
+    background: var(--hds-background-stock);
+    color: var(--hds-color-data);
     font-family: inherit;
     padding: unset;
     -webkit-user-select: none;
@@ -163,11 +86,13 @@ button {
 }
 
 input {
+    background: var(--hds-background);
     font-family: unset;
     letter-spacing: -.04rem;
 }
 
     input:focus {
+        background: var(--hds-background-pressed);
         outline: none;
     }
 
@@ -179,23 +104,12 @@ label {
 }
 
 select {
-    font-size: var(--font-size-interaction-small);
-    padding: var(--padding-really-small);
     border: var(--card-border);
-    border-radius: var(--radius-small);
-    background: var(--card-bg);
-    transition: var(--transition);
+    background: var(--hds-background-stock);
+    color: var(--hds-color-data);
 }
 
-    select:hover {
-        background: var(--card-bg-hover);
-    }
-
-    select:active {
-        transform: var(--card-scalex2);
-    }
-
     select:active, select:focus {
-        background: var(--card-bg-active);
+        background: var(--hds-background-pressed);
         outline: none;
     }

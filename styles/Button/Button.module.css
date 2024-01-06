@@ -1,0 +1,36 @@
+.Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--hds-radius);
+    padding: 1.6rem 2rem;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    transition: var(--transition);
+    font-size: var(--font-size-footnote);
+    font-weight: var(--font-weight-bold);
+}
+ 
+    @media (hover: hover) and (pointer: fine) {
+        .Button:hover {
+            background: var(--hds-background-hover) !important;
+        }
+    }
+
+    .Button:active {
+        background: var(--hds-background-pressed) !important;
+    }
+    
+    .Column {
+        flex-direction: column;
+        gap: .4rem;
+    }
+
+    .Row {
+        gap: .4rem;
+    }
+
+    .Filter {
+        width: max-content !important;
+    }

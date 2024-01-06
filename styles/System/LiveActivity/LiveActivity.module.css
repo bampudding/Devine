@@ -1,32 +1,25 @@
 .LiveActivity {
     display: flex;
     justify-content: center;
-    padding: 14.4rem 0;
+    padding: 11.6rem 0;
     width: 100%;
-    transition: padding .2s ease-in-out;
 }
 
-    @media (max-width: calc(1279.98px + 4.8rem)) {
-        .LiveActivity {
-            padding: 14.4rem var(--padding-large);
-        }
+@media (max-width: calc(1279.98px + 4.8rem)) {
+    .LiveActivity {
+        padding: 10.4rem var(--hds-padding);
     }
-
-    @media (max-width: 767.98px) {
-        .LiveActivity {
-            padding: 9.6rem var(--padding-large);
-        }
-    }
+}
 
     .Container {
         display: flex;
         flex-direction: column;
-        gap: var(--gap-tera);
+        gap: 3.6rem;
         width: 100%;
         max-width: var(--vp-width-pc);
     }
 
-        @media (max-width: 767.98px) {
+        @media (max-width: 903.98px) {
             .Container {
                 gap: 4.2rem;
             }

@@ -1,8 +1,10 @@
 .Group {
+    background: var(--card-bg);
     border-radius: var(--card-radius);
     border: var(--card-border);
     overflow: hidden;
     width: 100%;
+    transition: var(--transition);
 }
 
 .Group > * {
@@ -53,7 +55,7 @@
         border-radius: var(--box-radius);
         box-shadow: var(--box-shadow);
         border: 0;
-        transition: var(--transition-bg);
+        transition: var(--transition);
     }
 
         .LikeBox > * {
@@ -68,6 +70,7 @@
         display: flex;
         flex-direction: column;
         gap: var(--gap-nano);
+        background: var(--box-bg);
         border: 0 !important;
         overflow: visible;
     }
@@ -81,7 +84,7 @@
             border: 0;
             box-shadow: unset !important;
             overflow: initial;
-            transition: var(--transition-nocolor);
+            transition: var(--transition);
         }
 
             .NoBorder > *:active {

@@ -2,9 +2,11 @@ import styles from "./SVG.module.css";
 import SVGData from "./SVGData";
 
 interface Props {
-    Icon: string;
-    Size: number;
-    Color?: string;
+    icon: string;
+    size?: number;
+    width?: number;
+    height?: number;
+    color?: string;
 }
 
 const normalizeDToArray = (d: string | (string | string[])[]): string[] => {
@@ -14,20 +16,20 @@ const normalizeDToArray = (d: string | (string | string[])[]): string[] => {
     return [d];
 };
 
-const SVG = ({
-    Icon, Size, Color,
+const SvgIcon = ({
+    icon, size, width, height, color,
 }: Props) => {
-    const dArray: string[] = normalizeDToArray(SVGData[Icon].d);
+    const dArray: string[] = normalizeDToArray(SVGData[icon].d);
 
     return (
-        <div className={styles.SVG} style={{ width: `calc(.1 * ${Size}rem)`, height: `calc(.1 * ${Size}rem)` }}>
-            <svg style={{ width: `calc(.1 * ${Size}rem)`, height: `calc(.1 * ${Size}rem)` }} viewBox={SVGData[Icon].viewBox}>
+        <div className={styles.SVG} style={{ width: `calc(.1 * ${width || size}rem)`, height: `calc(.1 * ${height || size}rem)` }}>
+            <svg style={{ width: "auto", height: `calc(.1 * ${height || size}rem)` }} viewBox={SVGData[icon].viewBox}>
                 {dArray.map((d, index) => (
-                    <path key={index} d={d} fill={Color ? Color : "var(--body-default)"} />
+                    <path key={index} d={d} fill={color ? color : "var(--hds-color-data)"} />
                 ))}
             </svg>
         </div>
     );
 }
 
-export default SVG
+export default SvgIcon

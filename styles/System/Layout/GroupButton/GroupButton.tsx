@@ -4,7 +4,6 @@ interface Props {
     matrix?: "Row" | "Column";
     grid?: 1 | 2 | 3 | 4;
     flexible?: boolean;
-    strict?: boolean;
     mobileHide?: boolean;
     pcHide?: boolean;
     tabletHide?: boolean;
@@ -13,10 +12,10 @@ interface Props {
 }
 
 const GroupButton = ({
-    matrix, grid, flexible, strict, mobileHide, pcHide, tabletHide, className, children
+    matrix, grid, flexible, mobileHide, pcHide, tabletHide, className, children
 }: Props) => {
     return (
-        <div className={`${styles.Group} ${strict && styles.strict} ${className} ${mobileHide && "mobile-hide"} ${pcHide && "pc-hide"} ${tabletHide && "tablet-hide"} ${grid && styles.Grid}
+        <div className={`${styles.Group} ${className} ${mobileHide && "mobile-hide"} ${pcHide && "pc-hide"} ${tabletHide && "tablet-hide"} ${grid && styles.Grid}
         ${
             grid === 1 ?
                 (flexible ? styles.gridOneFlex : styles.gridOne) :
